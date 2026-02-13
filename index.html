@@ -3,45 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <title>Kraphat Free Script</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 body{
-  background:#0d0d0d;
-  color:white;
-  font-family:sans-serif;
-  text-align:center;
-}
-.box{
-  background:#1a1a1a;
-  margin:20px;
+  background:#050b07;
+  color:#00ff88;
+  font-family:Arial, sans-serif;
   padding:20px;
-  border-radius:10px;
 }
+
+h1{
+  text-align:center;
+  text-shadow:0 0 15px #00ff88;
+}
+
+.card{
+  background:#07150d;
+  border:2px solid #00ff88;
+  box-shadow:0 0 15px #00ff88;
+  border-radius:15px;
+  padding:15px;
+  margin-bottom:25px;
+}
+
+.title{
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.info{
+  font-size:14px;
+  color:#7cffc1;
+}
+
+pre{
+  background:#000;
+  border:1px solid #00ff88;
+  border-radius:10px;
+  padding:12px;
+  color:#00ffcc;
+  overflow:auto;
+}
+
 button{
-  background:#00ffcc;
+  width:100%;
+  margin-top:10px;
+  padding:12px;
+  background:#0a2;
   border:none;
-  padding:12px 25px;
-  border-radius:6px;
+  border-radius:10px;
+  color:black;
   font-size:16px;
+  cursor:pointer;
+  box-shadow:0 0 10px #00ff88;
+}
+
+button:hover{
+  background:#00ff88;
 }
 </style>
 </head>
 
 <body>
-<h1>🔥 Kraphat Free Script 🔥</h1>
 
-<div class="box">
-<p>Blox Fruits Script</p>
-<pre id="code">loadstring(game:HttpGet("https://yourlink.lua"))()</pre>
-<button onclick="copy()">Copy Script</button>
+<h1>☣ Kraphat Free Script ☣</h1>
+
+<!-- Flick -->
+<div class="card">
+  <div class="title">🎮 Script 1 : Flick</div>
+  <div class="info">👤 ผู้สร้าง: Josh</div>
+
+  <pre id="s1">loadstring(game:HttpGet("https://raw.githubusercontent.com/Joshingtonn123/JoshScript/refs/heads/main/SyrexhubSniperOrDie"))()</pre>
+
+  <button onclick="copy('s1')">📋 Copy Script</button>
+</div>
+
+<!-- Blox Fruits 1 -->
+<div class="card">
+  <div class="title">🍏 Script 2 : Blox Fruits (Omgshit)</div>
+  <div class="info">👤 ผู้สร้าง: Omgshit</div>
+
+  <pre id="s2">loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()</pre>
+
+  <button onclick="copy('s2')">📋 Copy Script</button>
+</div>
+
+<!-- Blox Fruits 2 -->
+<div class="card">
+  <div class="title">🐉 Script 3 : Blox Fruits (Dragon Hub)</div>
+  <div class="info">👤 ผู้สร้าง: DragonHub</div>
+
+  <pre id="s3">loadstring(game:HttpGet("https://raw.githubusercontent.com/dragonhubdev/dragonwitheveryone/refs/heads/main/Main-BF.lua"))()</pre>
+
+  <button onclick="copy('s3')">📋 Copy Script</button>
 </div>
 
 <script>
-function copy(){
-  navigator.clipboard.writeText(
-    document.getElementById("code").innerText
-  );
-  alert("คัดลอกแล้ว!");
+function copy(id){
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text);
+  alert("คัดลอกสคริปต์แล้ว!");
 }
 </script>
 
