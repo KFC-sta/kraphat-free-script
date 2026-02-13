@@ -2,156 +2,183 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Kraphat Script Hub</title>
+<title>Kraphat Free Script Hub</title>
 
 <style>
 body{
-  margin:0;
-  background:black;
-  color:#00ff88;
-  font-family:Arial, sans-serif;
-  text-align:center;
+    margin:0;
+    background:#000;
+    color:#00ff88;
+    font-family: Arial, sans-serif;
+    text-align:center;
 }
 
+/* ===== Neon Banner ===== */
 .header-img{
-  margin:30px auto;
+    margin:30px auto;
 }
 .header-img img{
-  max-width:90%;
-  border-radius:20px;
-  box-shadow:0 0 35px #00ff88;
+    max-width:95%;
+    border-radius:20px;
+    box-shadow:0 0 15px #00ff88,0 0 40px #00ff88;
+    animation: neon 2s infinite alternate;
+}
+@keyframes neon{
+    from{box-shadow:0 0 15px #00ff88;}
+    to{box-shadow:0 0 60px #00ff88;}
 }
 
-h1{
-  text-shadow:0 0 20px #00ff88;
+/* ===== Status ===== */
+.status{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin:20px 0;
+}
+.badge{
+    border:1px solid #00ff88;
+    padding:8px 15px;
+    border-radius:20px;
+    box-shadow:0 0 10px #00ff88;
+}
+
+/* ===== Card ===== */
+.card{
+    width:90%;
+    max-width:700px;
+    margin:20px auto;
+    padding:20px;
+    border-radius:15px;
+    background:#050505;
+    box-shadow:0 0 25px #00ff88;
 }
 
 pre{
-  margin:20px auto;
-  width:90%;
-  max-width:800px;
-  background:#0a0a0a;
-  padding:20px;
-  border-radius:15px;
-  box-shadow:0 0 25px #00ff88;
-  color:#00ff88;
-  text-align:left;
-  overflow:auto;
+    text-align:left;
+    background:#000;
+    padding:15px;
+    border-radius:10px;
+    overflow-x:auto;
+    color:#00ff88;
 }
 
 button{
-  background:#00ff88;
-  border:none;
-  padding:15px 30px;
-  border-radius:30px;
-  font-size:16px;
-  cursor:pointer;
-  box-shadow:0 0 20px #00ff88;
+    margin-top:10px;
+    padding:10px 25px;
+    background:#00ff88;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
 }
 button:hover{
-  background:#00cc6a;
+    box-shadow:0 0 20px #00ff88;
+}
+
+.warning{
+    margin:40px;
+    color:#ffaa00;
 }
 </style>
 </head>
 
 <body>
 
+<!-- ===== Banner ===== -->
 <div class="header-img">
-  <img src="banner.png">
+    <img src="banner.png" alt="Kraphat Script Hub">
 </div>
 
 <h1>☣ Kraphat Free Script Hub ☣</h1>
-<p>คัดลอกสคริปด้านล่างไปวางใน Executor</p>
 
-<pre id="code">
-loadstring(game:HttpGet("https://raw.githubusercontent.com/KFC-sta/kraphat-free-script/main/hub.lua"))()
+<div class="status">
+    <div class="badge">ONLINE</div>
+    <div class="badge">Scripts: 8+</div>
+    <div class="badge">Games: Multi</div>
+</div>
+
+<!-- ===== ALL IN ONE HUB ===== -->
+<div class="card">
+<h3>☣ Kraphat ULTIMATE Script Hub (ALL IN ONE)</h3>
+<pre id="hub">loadstring(game:HttpGet("https://raw.githubusercontent.com/KFC-sta/kraphat-free-script/main/hub.lua"))()</pre>
+<button onclick="copy('hub')">📋 Copy Script</button>
+</div>
+
+<!-- ===== Flick ===== -->
+<div class="card">
+<h3>🔥 Flick</h3>
+<pre id="s1">loadstring(game:HttpGet("https://raw.githubusercontent.com/Joshington123/JoshScript/refs/heads/main/SyrexhubSniper"))()</pre>
+<button onclick="copy('s1')">📋 Copy Script</button>
+</div>
+
+<!-- ===== Blox Fruits OmGshit ===== -->
+<div class="card">
+<h3>🍎 Blox Fruits (OmGshit)</h3>
+<pre id="s2">loadstring(game:HttpGet("https://raw.githubusercontent.com/OmGshit/Scripts/main/MainLoader.lua"))()</pre>
+<button onclick="copy('s2')">📋 Copy Script</button>
+</div>
+
+<!-- ===== Dragon Hub ===== -->
+<div class="card">
+<h3>🐉 Blox Fruits (Dragon Hub)</h3>
+<pre id="s3">loadstring(game:HttpGet("https://raw.githubusercontent.com/dragonhubdev/dragonwitheryone/refs/heads/main/Main-BF.lua"))()</pre>
+<button onclick="copy('s3')">📋 Copy Script</button>
+</div>
+
+<!-- ===== Blox Fruits PVP / FARM ===== -->
+<div class="card">
+<h3>⚔️ Blox Fruits PVP / FARM</h3>
+<pre id="s4">
+local script_mode = "PVP"
+
+local scripts = {
+    [6768505766] = {
+        PVP  = "https://api.luarmor.net/files/v3/loaders/f35c34bae1ac84c122df5214310b8eb.lua",
+        FARM = "https://api.luarmor.net/files/v3/loaders/32b520fd3ef340a3c6f701b6edf48e55.lua"
+    }
+}
+
+local cfg = scripts[game.GameId]
+if not cfg then
+    game:GetService("Players").LocalPlayer:Kick("Game not supported")
+end
+
+loadstring(game:HttpGet(cfg[script_mode]))()
 </pre>
+<button onclick="copy('s4')">📋 Copy Script</button>
+</div>
 
-<button onclick="copy()">📋 Copy Script</button>
+<!-- ===== Escape Tsunami ===== -->
+<div class="card">
+<h3>🌊 Escape Tsunami – Script 1</h3>
+<pre id="t1">loadstring(game:HttpGet("https://raw.githubusercontent.com/Khangdz28/Mains/refs/heads/main/Tsunami"))()</pre>
+<button onclick="copy('t1')">📋 Copy Script</button>
+</div>
+
+<div class="card">
+<h3>🌊 Escape Tsunami – Token Multiplier</h3>
+<pre id="t2">loadstring(game:HttpGet("https://raw.githubusercontent.com/xerath-devx/ETFB/refs/heads/main/tokenmultiplier.lua"))()</pre>
+<button onclick="copy('t2')">📋 Copy Script</button>
+</div>
+
+<div class="card">
+<h3>🌊 Escape Tsunami – RauSeNia</h3>
+<pre id="t3">loadstring(game:HttpGet("https://raw.githubusercontent.com/thinhdeptrai-netizen/ETFB-1.0/refs/heads/main/EscapeTsunamiForBrainrots-RauSeNia-1.0"))()</pre>
+<button onclick="copy('t3')">📋 Copy Script</button>
+</div>
+
+<div class="warning">
+⚠️ ใช้สคริปต์อย่างระมัดระวัง มีความเสี่ยงโดนแบน
+</div>
 
 <script>
-function copy(){
-  navigator.clipboard.writeText(document.getElementById("code").innerText);
-  alert("คัดลอกแล้ว!");
+function copy(id){
+    navigator.clipboard.writeText(
+        document.getElementById(id).innerText
+    );
+    alert("คัดลอก Script แล้ว!");
 }
 </script>
 
 </body>
-</html>-- Kraphat ULTIMATE Script Hub
--- Style : Neon Hacker
-
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("☣ Kraphat Script Hub ☣", "DarkTheme")
-
--- ================= Flick =================
-local FlickTab = Window:NewTab("Flick")
-local FlickSec = FlickTab:NewSection("Flick Scripts")
-
-FlickSec:NewButton("Flick - Syrex Hub", "", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Joshington123/JoshScript/refs/heads/main/SyrexhubSniperOrDie"))()
-end)
-
--- ================= Blox Fruits =================
-local BFtab = Window:NewTab("Blox Fruits")
-local BFSec = BFtab:NewSection("Main Scripts")
-
-BFSec:NewButton("Blox Fruits - OmgsHit", "", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()
-end)
-
-BFSec:NewButton("Blox Fruits - Dragon Hub", "", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/dragonhubdev/dragonwitheryone/refs/heads/main/Main-BF.lua"))()
-end)
-
-BFSec:NewButton("Blox Fruits - PVP", "", function()
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/0537e73544093069d8fbc5638fde10.lua"))()
-end)
-
--- ================= Blox Fruits Auto Detect =================
-local BF2 = BFtab:NewSection("PVP / FARM Auto")
-
-BF2:NewButton("Auto Detect PVP / FARM", "", function()
-    local script_mode = "PVP"
-
-    local scripts = {
-        [6765805766] = {
-            PVP  = "https://api.luarmor.net/files/v3/loaders/f35c34bae1af8c1422df5214310b8eb.lua",
-            FARM = "https://api.luarmor.net/files/v3/loaders/32b520fd3ef340a3c6f701b6edf48e55.lua"
-        },
-        [994732206] = {
-            PVP  = "https://api.luarmor.net/files/v3/loaders/341aeb3eaa4e6423a4cdfb2b48e77.lua"
-        }
-    }
-
-    local cfg = scripts[game.GameId]
-    if not cfg then
-        game:GetService("Players").LocalPlayer:Kick("Game not supported")
-        return
-    end
-
-    loadstring(game:HttpGet(cfg[(script_mode or "PVP"):upper()] or cfg.PVP))()
-end)
-
--- ================= Escape Tsunami =================
-local ETtab = Window:NewTab("Escape Tsunami")
-local ETSec = ETtab:NewSection("Escape Tsunami for Brainrots")
-
-ETSec:NewButton("Script 1 - Khangdz28", "", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Khangdz28/Mains/refs/heads/main/Tsunami"))()
-end)
-
-ETSec:NewButton("Script 2 - Token Multiplier", "", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xerath-devx/ETFB/refs/heads/main/tokenmultiplier.lua"))()
-end)
-
-ETSec:NewButton("Script 3 - RauSeNia", "", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/thinhdeptrai-netizen/ETFB-1.0/refs/heads/main/EscapeTsunamiForBrainrots-RauSeNia-1.0"))()
-end)
-
--- ================= Credit =================
-local CreditTab = Window:NewTab("Credit")
-local CreditSec = CreditTab:NewSection("Info")
-
-CreditSec:NewLabel("Script Hub : Kraphat")
-CreditSec:NewLabel("Style : Neon Hacker")
-CreditSec:NewLabel("ALL MAPS | ALL SCRIPTS")
+</html>
