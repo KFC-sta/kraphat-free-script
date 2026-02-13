@@ -1,66 +1,125 @@
--- ☣ Kraphat ULTIMATE Script Hub ☣
--- รวมทุกสคริปตั้งแต่ต้นจนจบ
--- Flick / Blox Fruits / Blox Fruits PVP / Escape Tsunami
--- Theme : Hacker Neon
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Kraphat Script Hub</title>
 
-local Library = loadstring(game:HttpGet(
-    "https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"
-))()
+<style>
+body{
+  margin:0;
+  background:black;
+  color:#00ff88;
+  font-family:Arial, sans-serif;
+  text-align:center;
+}
 
-local Window = Library.CreateLib("☣ Kraphat ULTIMATE Script Hub ☣", "DarkTheme")
+.header-img{
+  margin:30px auto;
+}
+.header-img img{
+  max-width:90%;
+  border-radius:20px;
+  box-shadow:0 0 35px #00ff88;
+}
 
-------------------------------------------------
--- Flick
-------------------------------------------------
-local FlickTab = Window:NewTab("🎯 Flick")
+h1{
+  text-shadow:0 0 20px #00ff88;
+}
+
+pre{
+  margin:20px auto;
+  width:90%;
+  max-width:800px;
+  background:#0a0a0a;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 0 25px #00ff88;
+  color:#00ff88;
+  text-align:left;
+  overflow:auto;
+}
+
+button{
+  background:#00ff88;
+  border:none;
+  padding:15px 30px;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:0 0 20px #00ff88;
+}
+button:hover{
+  background:#00cc6a;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header-img">
+  <img src="banner.png">
+</div>
+
+<h1>☣ Kraphat Free Script Hub ☣</h1>
+<p>คัดลอกสคริปด้านล่างไปวางใน Executor</p>
+
+<pre id="code">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KFC-sta/kraphat-free-script/main/hub.lua"))()
+</pre>
+
+<button onclick="copy()">📋 Copy Script</button>
+
+<script>
+function copy(){
+  navigator.clipboard.writeText(document.getElementById("code").innerText);
+  alert("คัดลอกแล้ว!");
+}
+</script>
+
+</body>
+</html>-- Kraphat ULTIMATE Script Hub
+-- Style : Neon Hacker
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("☣ Kraphat Script Hub ☣", "DarkTheme")
+
+-- ================= Flick =================
+local FlickTab = Window:NewTab("Flick")
 local FlickSec = FlickTab:NewSection("Flick Scripts")
 
-FlickSec:NewButton("Flick - Syrex Hub (Josh)", "Flick Script", function()
-    loadstring(game:HttpGet(
-        "https://raw.githubusercontent.com/Joshingtonn123/JoshScript/refs/heads/main/SyrexhubSniperOrDie"
-    ))()
+FlickSec:NewButton("Flick - Syrex Hub", "", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Joshington123/JoshScript/refs/heads/main/SyrexhubSniperOrDie"))()
 end)
 
-------------------------------------------------
--- Blox Fruits
-------------------------------------------------
-local BFTab = Window:NewTab("🍏 Blox Fruits")
-local BFSec = BFTab:NewSection("Main Scripts")
+-- ================= Blox Fruits =================
+local BFtab = Window:NewTab("Blox Fruits")
+local BFSec = BFtab:NewSection("Main Scripts")
 
-BFSec:NewButton("Blox Fruits - Omgshit", "Auto Farm / Utility", function()
-    loadstring(game:HttpGet(
-        "https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"
-    ))()
+BFSec:NewButton("Blox Fruits - OmgsHit", "", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()
 end)
 
-BFSec:NewButton("Blox Fruits - Dragon Hub", "All in One", function()
-    loadstring(game:HttpGet(
-        "https://raw.githubusercontent.com/dragonhubdev/dragonwitheveryone/refs/heads/main/Main-BF.lua"
-    ))()
+BFSec:NewButton("Blox Fruits - Dragon Hub", "", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/dragonhubdev/dragonwitheryone/refs/heads/main/Main-BF.lua"))()
 end)
 
-------------------------------------------------
--- Blox Fruits PVP
-------------------------------------------------
-local PVPTab = Window:NewTab("⚔️ Blox Fruits PVP")
-local PVPSec = PVPTab:NewSection("PVP Scripts")
-
-PVPSec:NewButton("Blox Fruits PVP (Luarmor)", "Instant Load", function()
-    loadstring(game:HttpGet(
-        "https://api.luarmor.net/files/v3/loaders/0537e73544093069d88fbc5638fd1e10.lua"
-    ))()
+BFSec:NewButton("Blox Fruits - PVP", "", function()
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/0537e73544093069d8fbc5638fde10.lua"))()
 end)
 
-PVPSec:NewButton("Blox Fruits PVP / FARM (Smart)", "Auto Detect", function()
-    local script_mode = "PVP" -- เปลี่ยนเป็น FARM ได้
+-- ================= Blox Fruits Auto Detect =================
+local BF2 = BFtab:NewSection("PVP / FARM Auto")
+
+BF2:NewButton("Auto Detect PVP / FARM", "", function()
+    local script_mode = "PVP"
 
     local scripts = {
-        [6765805766] = { -- Block Spin
-            PVP  = "https://api.luarmor.net/files/v3/loaders/f35c34bae1acf8c1422df5214310b8eb.lua",
-            FARM = "https://api.luarmor.net/files/v3/loaders/32b520fd3ef340a3c6f701b6edf48e55.lua",
+        [6765805766] = {
+            PVP  = "https://api.luarmor.net/files/v3/loaders/f35c34bae1af8c1422df5214310b8eb.lua",
+            FARM = "https://api.luarmor.net/files/v3/loaders/32b520fd3ef340a3c6f701b6edf48e55.lua"
         },
-        [994732206] = { -- Blox Fruits
-            PVP = "https://api.luarmor.net/files/v3/loaders/341aeb3eaa42e6423a4cdbf2b148e77f.lua",
+        [994732206] = {
+            PVP  = "https://api.luarmor.net/files/v3/loaders/341aeb3eaa4e6423a4cdfb2b48e77.lua"
         }
     }
 
@@ -73,36 +132,26 @@ PVPSec:NewButton("Blox Fruits PVP / FARM (Smart)", "Auto Detect", function()
     loadstring(game:HttpGet(cfg[(script_mode or "PVP"):upper()] or cfg.PVP))()
 end)
 
-------------------------------------------------
--- Escape Tsunami (Biranrots)
-------------------------------------------------
-local ETTab = Window:NewTab("🌊 Escape Tsunami")
-local ETSec = ETTab:NewSection("Biranrots Scripts")
+-- ================= Escape Tsunami =================
+local ETtab = Window:NewTab("Escape Tsunami")
+local ETSec = ETtab:NewSection("Escape Tsunami for Brainrots")
 
-ETSec:NewButton("Escape Tsunami Script 1", "Khangdz28", function()
-    loadstring(game:HttpGet(
-        "https://raw.githubusercontent.com/Khangdz28/Mains/refs/heads/main/Tsunami"
-    ))()
+ETSec:NewButton("Script 1 - Khangdz28", "", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Khangdz28/Mains/refs/heads/main/Tsunami"))()
 end)
 
-ETSec:NewButton("Escape Tsunami Script 2", "Token Multiplier", function()
-    loadstring(game:HttpGet(
-        "https://raw.githubusercontent.com/xerath-devx/ETFB/refs/heads/main/tokenmultiplier.lua"
-    ))()
+ETSec:NewButton("Script 2 - Token Multiplier", "", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xerath-devx/ETFB/refs/heads/main/tokenmultiplier.lua"))()
 end)
 
-ETSec:NewButton("Escape Tsunami Script 3", "RauSeNia v1.0", function()
-    loadstring(game:HttpGet(
-        "https://raw.githubusercontent.com/thinhdeptrai-netizen/ETFB-1.0/refs/heads/main/EscapeTsunamiForBrainrots-RauSeNia-1.0"
-    ))()
+ETSec:NewButton("Script 3 - RauSeNia", "", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/thinhdeptrai-netizen/ETFB-1.0/refs/heads/main/EscapeTsunamiForBrainrots-RauSeNia-1.0"))()
 end)
 
-------------------------------------------------
--- Credit
-------------------------------------------------
-local CreditTab = Window:NewTab("💚 Credit")
+-- ================= Credit =================
+local CreditTab = Window:NewTab("Credit")
 local CreditSec = CreditTab:NewSection("Info")
 
 CreditSec:NewLabel("Script Hub : Kraphat")
 CreditSec:NewLabel("Style : Neon Hacker")
-CreditSec:NewLabel("ALL MAPS / ALL SCRIPTS")
+CreditSec:NewLabel("ALL MAPS | ALL SCRIPTS")
