@@ -68,7 +68,7 @@ button:hover{
 
 <h1>☣ Kraphat Free Script ☣</h1>
 
-<!-- Flick -->
+<!-- Script 1 : Flick -->
 <div class="card">
   <div class="title">🎮 Script 1 : Flick</div>
   <div class="info">👤 ผู้สร้าง: Josh</div>
@@ -78,7 +78,7 @@ button:hover{
   <button onclick="copy('s1')">📋 Copy Script</button>
 </div>
 
-<!-- Blox Fruits 1 -->
+<!-- Script 2 : Blox Fruits (Omgshit) -->
 <div class="card">
   <div class="title">🍏 Script 2 : Blox Fruits (Omgshit)</div>
   <div class="info">👤 ผู้สร้าง: Omgshit</div>
@@ -88,7 +88,7 @@ button:hover{
   <button onclick="copy('s2')">📋 Copy Script</button>
 </div>
 
-<!-- Blox Fruits 2 -->
+<!-- Script 3 : Blox Fruits (Dragon Hub) -->
 <div class="card">
   <div class="title">🐉 Script 3 : Blox Fruits (Dragon Hub)</div>
   <div class="info">👤 ผู้สร้าง: DragonHub</div>
@@ -96,6 +96,45 @@ button:hover{
   <pre id="s3">loadstring(game:HttpGet("https://raw.githubusercontent.com/dragonhubdev/dragonwitheveryone/refs/heads/main/Main-BF.lua"))()</pre>
 
   <button onclick="copy('s3')">📋 Copy Script</button>
+</div>
+
+<!-- Script 4 : Blox Fruits PVP -->
+<div class="card">
+  <div class="title">⚔️ Script 4 : Blox Fruits PVP</div>
+  <div class="info">👤 ผู้สร้าง: Luarmor</div>
+
+  <pre id="s4">loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/0537e73544093069d88fbc5638fd1e10.lua"))()</pre>
+
+  <button onclick="copy('s4')">📋 Copy Script</button>
+</div>
+
+<!-- Script 5 : Blox Fruits PVP / FARM -->
+<div class="card">
+  <div class="title">🔥 Script 5 : Blox Fruits (PVP / FARM)</div>
+  <div class="info">👤 ผู้สร้าง: Luarmor | เปลี่ยนโหมดได้</div>
+
+  <pre id="s5">-- เปลี่ยนเป็น "FARM" ได้
+local script_mode = "PVP"
+
+local scripts = {
+    [6765805766] = {
+        PVP  = "https://api.luarmor.net/files/v3/loaders/f35c34bae1acf8c1422df5214310b8eb.lua",
+        FARM = "https://api.luarmor.net/files/v3/loaders/32b520fd3ef340a3c6f701b6edf48e55.lua",
+    },
+    [994732206] = {
+        PVP = "https://api.luarmor.net/files/v3/loaders/341aeb3eaa42e6423a4cdbf2b148e77f.lua",
+    }
+}
+
+local cfg = scripts[game.GameId]
+if not cfg then
+    game:GetService("Players").LocalPlayer:Kick("Game not supported")
+    return
+end
+
+loadstring(game:HttpGet(cfg[(script_mode or "PVP"):upper()] or cfg.PVP))()</pre>
+
+  <button onclick="copy('s5')">📋 Copy Script</button>
 </div>
 
 <script>
