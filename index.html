@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Kraphat Free Script</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  background:#0d0d0d;
+  color:white;
+  font-family:sans-serif;
+  text-align:center;
+}
+.box{
+  background:#1a1a1a;
+  margin:20px;
+  padding:20px;
+  border-radius:10px;
+}
+button{
+  background:#00ffcc;
+  border:none;
+  padding:12px 25px;
+  border-radius:6px;
+  font-size:16px;
+}
+</style>
+</head>
+
+<body>
+<h1>🔥 Kraphat Free Script 🔥</h1>
+
+<div class="box">
+<p>Blox Fruits Script</p>
+<pre id="code">loadstring(game:HttpGet("https://yourlink.lua"))()</pre>
+<button onclick="copy()">Copy Script</button>
+</div>
+
+<script>
+function copy(){
+  navigator.clipboard.writeText(
+    document.getElementById("code").innerText
+  );
+  alert("คัดลอกแล้ว!");
+}
+</script>
+
+</body>
+</html>
