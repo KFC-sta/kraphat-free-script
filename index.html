@@ -2,149 +2,173 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Kraphat Script Hub</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kraphat Free Script Hub</title>
 
 <style>
 body{
-  background:#050b07;
-  color:#00ff88;
-  font-family:Arial, sans-serif;
-  margin:0;
-  padding:15px;
+    margin:0;
+    background:#000;
+    color:#00ff88;
+    font-family: Arial, sans-serif;
+    text-align:center;
 }
-h1{
-  text-align:center;
-  text-shadow:0 0 20px #00ff88;
-}
-.status{
-  display:flex;
-  justify-content:space-around;
-  margin-bottom:15px;
-}
-.badge{
-  background:#07150d;
-  border:1px solid #00ff88;
-  padding:8px 14px;
-  border-radius:20px;
-  box-shadow:0 0 10px #00ff88;
-}
-.card{
-  background:#07150d;
-  border:2px solid #00ff88;
-  border-radius:15px;
-  padding:15px;
-  margin-bottom:20px;
-  box-shadow:0 0 15px #00ff88;
-}
-pre{
-  background:#000;
-  padding:10px;
-  border-radius:10px;
-  overflow:auto;
-  color:#00ffcc;
-}
-button{
-  width:100%;
-  margin-top:10px;
-  padding:10px;
-  background:#00ff88;
-  border:none;
-  border-radius:10px;
-  font-size:16px;
-}
-.warning{
-  background:#5a0000;
-  color:#fff;
-  padding:12px;
-  border-radius:10px;
-  text-align:center;
-}
-</style>.header-img{
-  text-align:center;
-  margin-bottom:30px;
+
+/* ===== Banner Neon ===== */
+.header-img{
+    margin:30px auto;
 }
 
 .header-img img{
-  max-width:100%;
-  height:auto;
-  border-radius:15px;
-  box-shadow:0 0 20px #00ff88;
+    max-width:95%;
+    border-radius:20px;
+    box-shadow:
+        0 0 15px #00ff88,
+        0 0 30px #00ff88,
+        0 0 60px #00ff88;
+    animation: neonPulse 1.8s infinite alternate;
 }
+
+@keyframes neonPulse{
+    from{
+        box-shadow:
+            0 0 10px #00ff88,
+            0 0 25px #00ff88,
+            0 0 50px #00ff88;
+    }
+    to{
+        box-shadow:
+            0 0 30px #00ff88,
+            0 0 60px #00ff88,
+            0 0 100px #00ff88;
+    }
+}
+
+/* ===== Status ===== */
+.status{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin:20px 0;
+}
+
+.badge{
+    border:1px solid #00ff88;
+    padding:8px 15px;
+    border-radius:20px;
+    box-shadow:0 0 10px #00ff88;
+}
+
+/* ===== Card ===== */
+.card{
+    width:90%;
+    max-width:600px;
+    margin:20px auto;
+    padding:20px;
+    border-radius:15px;
+    background:#050505;
+    box-shadow:0 0 20px #00ff88;
+}
+
+pre{
+    text-align:left;
+    background:#000;
+    padding:15px;
+    border-radius:10px;
+    overflow-x:auto;
+    color:#00ff88;
+}
+
+button{
+    margin-top:10px;
+    padding:10px 20px;
+    background:#00ff88;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    box-shadow:0 0 20px #00ff88;
+}
+
+/* Warning */
+.warning{
+    margin:30px;
+    color:#ffaa00;
+}
+</style>
 </head>
 
 <body>
 
-<img src="images/banner.png">
-
-<div class="status">
-  <div class="badge">🟢 ONLINE</div>
-  <div class="badge">📜 Scripts: 5</div>
-  <div class="badge">🎮 Games: 2</div>
+<!-- ===== Banner ===== -->
+<div class="header-img">
+    <img src="banner.png" alt="Kraphat Script Hub">
 </div>
 
-<!-- Flick -->
+<h1>☣ Kraphat Free Script Hub ☣</h1>
+
+<div class="status">
+    <div class="badge">ONLINE</div>
+    <div class="badge">Scripts: 5</div>
+    <div class="badge">Games: 2</div>
+</div>
+
+<!-- ===== Flick ===== -->
 <div class="card">
-<h3>🎮 Flick</h3>
-<pre id="s1">loadstring(game:HttpGet("https://raw.githubusercontent.com/Joshingtonn123/JoshScript/refs/heads/main/SyrexhubSniperOrDie"))()</pre>
+<h3>🔥 Flick</h3>
+<pre id="s1">loadstring(game:HttpGet("https://raw.githubusercontent.com/Joshington123/JoshScript/refs/heads/main/SyrexhubSniper"))()</pre>
 <button onclick="copy('s1')">📋 Copy Script</button>
 </div>
 
-<!-- Blox Fruits Omgshit -->
+<!-- ===== Blox Fruits OmGshit ===== -->
 <div class="card">
-<h3>🍎 Blox Fruits (Omgshit)</h3>
-<pre id="s2">loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()</pre>
+<h3>🍎 Blox Fruits (OmGshit)</h3>
+<pre id="s2">loadstring(game:HttpGet("https://raw.githubusercontent.com/OmGshit/Scripts/main/MainLoader.lua"))()</pre>
 <button onclick="copy('s2')">📋 Copy Script</button>
 </div>
 
-<!-- Blox Fruits Dragon -->
+<!-- ===== Dragon Hub ===== -->
 <div class="card">
 <h3>🐉 Blox Fruits (Dragon Hub)</h3>
-<pre id="s3">loadstring(game:HttpGet("https://raw.githubusercontent.com/dragonhubdev/dragonwitheveryone/refs/heads/main/Main-BF.lua"))()</pre>
+<pre id="s3">loadstring(game:HttpGet("https://raw.githubusercontent.com/dragonhubdev/dragonwitheryone/refs/heads/main/Main-BF.lua"))()</pre>
 <button onclick="copy('s3')">📋 Copy Script</button>
 </div>
 
-<!-- Blox Fruits PVP -->
+<!-- ===== PVP / FARM ===== -->
 <div class="card">
-<h3>⚔️ Blox Fruits PVP</h3>
-<pre id="s4">loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/0537e73544093069d88fbc5638fd1e10.lua"))()</pre>
-<button onclick="copy('s4')">📋 Copy Script</button>
-</div>
-
-<!-- Blox Fruits PVP / FARM -->
-<div class="card">
-<h3>🔥 Blox Fruits PVP / FARM</h3>
-<pre id="s5">-- เปลี่ยนโหมดได้: "PVP" หรือ "FARM"
+<h3>⚔️ Blox Fruits PVP / FARM</h3>
+<pre id="s4">
 local script_mode = "PVP"
 
 local scripts = {
-  [6765805766] = {
-    PVP  = "https://api.luarmor.net/files/v3/loaders/f35c34bae1acf8c1422df5214310b8eb.lua",
-    FARM = "https://api.luarmor.net/files/v3/loaders/32b520fd3ef340a3c6f701b6edf48e55.lua",
-  },
-  [994732206] = {
-    PVP = "https://api.luarmor.net/files/v3/loaders/341aeb3eaa42e6423a4cdbf2b148e77f.lua",
-  }
+    [6768505766] = {
+        PVP  = "https://api.luarmor.net/files/v3/loaders/f35c34bae1ac84c122df5214310b8eb.lua",
+        FARM = "https://api.luarmor.net/files/v3/loaders/32b520fd3ef340a3c6f701b6edf48e55.lua"
+    }
 }
 
 local cfg = scripts[game.GameId]
 if not cfg then
-  game:GetService("Players").LocalPlayer:Kick("Game not supported")
-  return
+    game:GetService("Players").LocalPlayer:Kick("Game not supported")
 end
 
-loadstring(game:HttpGet(cfg[(script_mode or "PVP"):upper()] or cfg.PVP))()</pre>
-<button onclick="copy('s5')">📋 Copy Script</button>
+loadstring(game:HttpGet(cfg[script_mode]))()
+</pre>
+<button onclick="copy('s4')">📋 Copy Script</button>
 </div>
 
 <div class="warning">
-⚠️ ใช้อย่างระมัดระวัง มีความเสี่ยงโดนแบน ⚠️
+⚠️ ใช้สคริปต์อย่างระมัดระวัง มีความเสี่ยงโดนแบน
 </div>
 
 <script>
 function copy(id){
-  navigator.clipboard.writeText(document.getElementById(id).innerText);
-  alert("คัดลอกสคริปต์แล้ว!");
+    navigator.clipboard.writeText(
+        document.getElementById(id).innerText
+    );
+    alert("คัดลอก Script แล้ว!");
 }
 </script>
 
