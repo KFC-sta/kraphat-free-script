@@ -2,145 +2,138 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Kraphat Free Script</title>
+<title>Kraphat Script Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 body{
   background:#050b07;
   color:#00ff88;
   font-family:Arial, sans-serif;
-  padding:20px;
+  margin:0;
+  padding:15px;
 }
-
 h1{
   text-align:center;
-  text-shadow:0 0 15px #00ff88;
+  text-shadow:0 0 20px #00ff88;
 }
-
+.status{
+  display:flex;
+  justify-content:space-around;
+  margin-bottom:15px;
+}
+.badge{
+  background:#07150d;
+  border:1px solid #00ff88;
+  padding:8px 14px;
+  border-radius:20px;
+  box-shadow:0 0 10px #00ff88;
+}
 .card{
   background:#07150d;
   border:2px solid #00ff88;
-  box-shadow:0 0 15px #00ff88;
   border-radius:15px;
   padding:15px;
-  margin-bottom:25px;
+  margin-bottom:20px;
+  box-shadow:0 0 15px #00ff88;
 }
-
-.title{
-  font-size:20px;
-  margin-bottom:8px;
-}
-
-.info{
-  font-size:14px;
-  color:#7cffc1;
-}
-
 pre{
   background:#000;
-  border:1px solid #00ff88;
+  padding:10px;
   border-radius:10px;
-  padding:12px;
-  color:#00ffcc;
   overflow:auto;
+  color:#00ffcc;
 }
-
 button{
   width:100%;
   margin-top:10px;
-  padding:12px;
-  background:#0a2;
+  padding:10px;
+  background:#00ff88;
   border:none;
   border-radius:10px;
-  color:black;
   font-size:16px;
-  cursor:pointer;
-  box-shadow:0 0 10px #00ff88;
 }
-
-button:hover{
-  background:#00ff88;
+.warning{
+  background:#5a0000;
+  color:#fff;
+  padding:12px;
+  border-radius:10px;
+  text-align:center;
 }
 </style>
 </head>
 
 <body>
 
-<h1>☣ Kraphat Free Script ☣</h1>
+<h1>☣ Kraphat Free Script Hub ☣</h1>
 
-<!-- Script 1 : Flick -->
-<div class="card">
-  <div class="title">🎮 Script 1 : Flick</div>
-  <div class="info">👤 ผู้สร้าง: Josh</div>
-
-  <pre id="s1">loadstring(game:HttpGet("https://raw.githubusercontent.com/Joshingtonn123/JoshScript/refs/heads/main/SyrexhubSniperOrDie"))()</pre>
-
-  <button onclick="copy('s1')">📋 Copy Script</button>
+<div class="status">
+  <div class="badge">🟢 ONLINE</div>
+  <div class="badge">📜 Scripts: 5</div>
+  <div class="badge">🎮 Games: 2</div>
 </div>
 
-<!-- Script 2 : Blox Fruits (Omgshit) -->
+<!-- Flick -->
 <div class="card">
-  <div class="title">🍏 Script 2 : Blox Fruits (Omgshit)</div>
-  <div class="info">👤 ผู้สร้าง: Omgshit</div>
-
-  <pre id="s2">loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()</pre>
-
-  <button onclick="copy('s2')">📋 Copy Script</button>
+<h3>🎮 Flick</h3>
+<pre id="s1">loadstring(game:HttpGet("https://raw.githubusercontent.com/Joshingtonn123/JoshScript/refs/heads/main/SyrexhubSniperOrDie"))()</pre>
+<button onclick="copy('s1')">📋 Copy Script</button>
 </div>
 
-<!-- Script 3 : Blox Fruits (Dragon Hub) -->
+<!-- Blox Fruits Omgshit -->
 <div class="card">
-  <div class="title">🐉 Script 3 : Blox Fruits (Dragon Hub)</div>
-  <div class="info">👤 ผู้สร้าง: DragonHub</div>
-
-  <pre id="s3">loadstring(game:HttpGet("https://raw.githubusercontent.com/dragonhubdev/dragonwitheveryone/refs/heads/main/Main-BF.lua"))()</pre>
-
-  <button onclick="copy('s3')">📋 Copy Script</button>
+<h3>🍎 Blox Fruits (Omgshit)</h3>
+<pre id="s2">loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()</pre>
+<button onclick="copy('s2')">📋 Copy Script</button>
 </div>
 
-<!-- Script 4 : Blox Fruits PVP -->
+<!-- Blox Fruits Dragon -->
 <div class="card">
-  <div class="title">⚔️ Script 4 : Blox Fruits PVP</div>
-  <div class="info">👤 ผู้สร้าง: Luarmor</div>
-
-  <pre id="s4">loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/0537e73544093069d88fbc5638fd1e10.lua"))()</pre>
-
-  <button onclick="copy('s4')">📋 Copy Script</button>
+<h3>🐉 Blox Fruits (Dragon Hub)</h3>
+<pre id="s3">loadstring(game:HttpGet("https://raw.githubusercontent.com/dragonhubdev/dragonwitheveryone/refs/heads/main/Main-BF.lua"))()</pre>
+<button onclick="copy('s3')">📋 Copy Script</button>
 </div>
 
-<!-- Script 5 : Blox Fruits PVP / FARM -->
+<!-- Blox Fruits PVP -->
 <div class="card">
-  <div class="title">🔥 Script 5 : Blox Fruits (PVP / FARM)</div>
-  <div class="info">👤 ผู้สร้าง: Luarmor | เปลี่ยนโหมดได้</div>
+<h3>⚔️ Blox Fruits PVP</h3>
+<pre id="s4">loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/0537e73544093069d88fbc5638fd1e10.lua"))()</pre>
+<button onclick="copy('s4')">📋 Copy Script</button>
+</div>
 
-  <pre id="s5">-- เปลี่ยนเป็น "FARM" ได้
+<!-- Blox Fruits PVP / FARM -->
+<div class="card">
+<h3>🔥 Blox Fruits PVP / FARM</h3>
+<pre id="s5">-- เปลี่ยนโหมดได้: "PVP" หรือ "FARM"
 local script_mode = "PVP"
 
 local scripts = {
-    [6765805766] = {
-        PVP  = "https://api.luarmor.net/files/v3/loaders/f35c34bae1acf8c1422df5214310b8eb.lua",
-        FARM = "https://api.luarmor.net/files/v3/loaders/32b520fd3ef340a3c6f701b6edf48e55.lua",
-    },
-    [994732206] = {
-        PVP = "https://api.luarmor.net/files/v3/loaders/341aeb3eaa42e6423a4cdbf2b148e77f.lua",
-    }
+  [6765805766] = {
+    PVP  = "https://api.luarmor.net/files/v3/loaders/f35c34bae1acf8c1422df5214310b8eb.lua",
+    FARM = "https://api.luarmor.net/files/v3/loaders/32b520fd3ef340a3c6f701b6edf48e55.lua",
+  },
+  [994732206] = {
+    PVP = "https://api.luarmor.net/files/v3/loaders/341aeb3eaa42e6423a4cdbf2b148e77f.lua",
+  }
 }
 
 local cfg = scripts[game.GameId]
 if not cfg then
-    game:GetService("Players").LocalPlayer:Kick("Game not supported")
-    return
+  game:GetService("Players").LocalPlayer:Kick("Game not supported")
+  return
 end
 
 loadstring(game:HttpGet(cfg[(script_mode or "PVP"):upper()] or cfg.PVP))()</pre>
+<button onclick="copy('s5')">📋 Copy Script</button>
+</div>
 
-  <button onclick="copy('s5')">📋 Copy Script</button>
+<div class="warning">
+⚠️ ใช้อย่างระมัดระวัง มีความเสี่ยงโดนแบน ⚠️
 </div>
 
 <script>
 function copy(id){
-  const text = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text);
+  navigator.clipboard.writeText(document.getElementById(id).innerText);
   alert("คัดลอกสคริปต์แล้ว!");
 }
 </script>
