@@ -1,141 +1,51 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kraphat Free Script</title>
+--[[ 
+ Kraphat Script Hub
+ Neon UI | All-in-One
+ Map: Escape Tsunami for Brainrots
+]]
 
-<style>
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f5f5f5;
-}
+-- Load UI Library
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-/* ===== Header ===== */
-.header{
-    background:#fff;
-    padding:10px;
-    display:flex;
-    align-items:center;
-    box-shadow:0 2px 6px rgba(0,0,0,.1);
-}
+-- Window
+local Window = Library.CreateLib("✨ Kraphat Script Hub ✨", "Ocean")
 
-.header img{
-    height:40px;
-    margin-right:10px;
-}
+-- Tabs
+local MainTab = Window:NewTab("🏠 Main")
+local EscapeTab = Window:NewTab("🌊 Escape Tsunami")
+local InfoTab = Window:NewTab("ℹ️ Info")
 
-.header h2{
-    margin:0;
-    font-size:18px;
-}
+-- Sections
+local MainSection = MainTab:NewSection("Welcome")
+local EscapeSection = EscapeTab:NewSection("Escape Tsunami Scripts")
+local InfoSection = InfoTab:NewSection("Info")
 
-/* ===== Card ===== */
-.container{
-    padding:15px;
-}
+-- Main
+MainSection:NewLabel("Neon Script Hub")
+MainSection:NewLabel("รวมทุกสคริปไว้ในที่เดียว")
+MainSection:NewLabel("By Kraphat")
 
-.card{
-    background:#fff;
-    border-radius:12px;
-    margin-bottom:20px;
-    box-shadow:0 4px 10px rgba(0,0,0,.1);
-    overflow:hidden;
-}
+-- Escape Tsunami Scripts
+EscapeSection:NewButton("🔥 Script 1 | Auto / Main", "Load Script 1", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Khangdz28/Mains/refs/heads/main/Tsunami"))()
+end)
 
-.card img{
-    width:100%;
-    display:block;
-}
+EscapeSection:NewButton("⚡ Script 2 | Token Multiplier", "Load Script 2", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xerath-devx/ETFB/refs/heads/main/tokenmultiplier.lua"))()
+end)
 
-.card-body{
-    padding:15px;
-}
+EscapeSection:NewButton("🚀 Script 3 | RauSeNia 1.0", "Load Script 3", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/thinhdeptrai-netizen/ETFB-1.0/refs/heads/main/EscapeTsunamiForBrainrots-RauSeNia-1.0"))()
+end)
 
-.card-body h3{
-    margin:0 0 8px;
-}
+-- Info
+InfoSection:NewLabel("Executor: Any")
+InfoSection:NewLabel("Status: Working")
+InfoSection:NewLabel("UI: Neon / Ocean Theme")
 
-.card-body p{
-    color:#666;
-    font-size:14px;
-}
-
-.btn{
-    display:block;
-    width:100%;
-    text-align:center;
-    background:#e60000;
-    color:#fff;
-    padding:12px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-    margin-top:10px;
-}
-</style>
-</head>
-
-<body>
-
-<!-- Header -->
-<div class="header">
-    <img src="banner.png">
-    <h2>Kraphat Free Script</h2>
-</div>
-
-<div class="container">
-
-<!-- Flick -->
-<div class="card">
-    <img src="https://i.imgur.com/JZ6G9xF.jpg">
-    <div class="card-body">
-        <h3>🔥 Flick Script</h3>
-        <p>สคริป Flick / Syrex Hub</p>
-        <a class="btn" href="https://raw.githubusercontent.com/Joshington123/JoshScript/refs/heads/main/SyrexhubSniper" target="_blank">
-            ดู / คัดลอกสคริป
-        </a>
-    </div>
-</div>
-
-<!-- Blox Fruits OmGshit -->
-<div class="card">
-    <img src="https://i.imgur.com/5z7QkXz.jpg">
-    <div class="card-body">
-        <h3>🍎 Blox Fruits (OmGshit)</h3>
-        <p>ฟาร์ม / Auto / ครบ</p>
-        <a class="btn" href="https://raw.githubusercontent.com/OmGshit/Scripts/main/MainLoader.lua" target="_blank">
-            ดู / คัดลอกสคริป
-        </a>
-    </div>
-</div>
-
-<!-- Dragon Hub -->
-<div class="card">
-    <img src="https://i.imgur.com/JN0sH0r.jpg">
-    <div class="card-body">
-        <h3>🐉 Blox Fruits (Dragon Hub)</h3>
-        <p>สายฟาร์ม + PVP</p>
-        <a class="btn" href="https://raw.githubusercontent.com/dragonhubdev/dragonwitheryone/refs/heads/main/Main-BF.lua" target="_blank">
-            ดู / คัดลอกสคริป
-        </a>
-    </div>
-</div>
-
-<!-- Escape Tsunami -->
-<div class="card">
-    <img src="https://i.imgur.com/9xKZx1D.jpg">
-    <div class="card-body">
-        <h3>🌊 Escape Tsunami</h3>
-        <p>รวมสคริป Brainrots</p>
-        <a class="btn" href="https://raw.githubusercontent.com/Khangdz28/Mains/refs/heads/main/Tsunami" target="_blank">
-            ดู / คัดลอกสคริป
-        </a>
-    </div>
-</div>
-
-</div>
-
-</body>
-</html>
+-- Notification
+game.StarterGui:SetCore("SendNotification",{
+    Title = "Kraphat Script Hub",
+    Text = "Loaded Successfully!",
+    Duration = 5
+})
