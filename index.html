@@ -2,66 +2,112 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Kraphat Free Script</title>
+<title>Kraphat Script Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  background:#000;
+  color:#00ff66;
+  font-family:Arial, sans-serif;
+}
+
+/* ===== Header ===== */
+h1{
+  text-align:center;
+  padding:25px 10px 5px;
+  font-size:36px;
+  color:#00ff66;
+  text-shadow:0 0 10px #00ff66,0 0 30px #00ff66;
+}
+.subtitle{
+  text-align:center;
+  margin-bottom:25px;
+  font-size:18px;
+  color:#00ff66;
+  opacity:0.85;
+}
+
+/* ===== Layout ===== */
+.container{
+  max-width:420px;
+  margin:auto;
+  padding:10px;
+}
+
+/* ===== Card ===== */
+.card{
+  border:2px solid #00ff66;
+  border-radius:18px;
+  padding:16px;
+  margin-bottom:25px;
+  box-shadow:0 0 20px #00ff66;
+}
+
+/* Banner image */
+.card img{
+  width:100%;
+  border-radius:14px;
+  margin-bottom:12px;
+  box-shadow:0 0 15px #00ff66;
+}
+
+/* Title */
+.card h2{
+  margin:10px 0 15px;
+  font-size:26px;
+  color:#00ff66;
+  text-shadow:0 0 10px #00ff66;
+}
+
+/* Button */
+.btn{
+  display:block;
+  text-align:center;
+  background:#00ff66;
+  color:#000;
+  padding:14px;
+  border-radius:30px;
+  font-size:18px;
+  font-weight:bold;
+  text-decoration:none;
+  box-shadow:0 0 20px #00ff66;
+}
+.btn:hover{
+  box-shadow:0 0 35px #00ff66;
+}
+</style>
 </head>
 
-<body style="
-margin:0;
-background:#000;
-color:#00ff66;
-font-family:Arial, sans-serif;
-">
+<body>
 
-<h1 style="
-text-align:center;
-padding:20px 0;
-color:#00ff66;
-text-shadow:0 0 10px #00ff66, 0 0 25px #00ff66;
-">
-Kraphat Free Script
-</h1>
+<h1>💀 KRAPHAT SCRIPT HUB 💀</h1>
+<div class="subtitle">สคริปทั้งหมด | Hacker Neon Style</div>
 
-<div style="display:flex; justify-content:center;">
-  <div style="
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-  padding:20px;
-  max-width:420px;
-  width:100%;
-  ">
+<div class="container">
 
-    <!-- Blox Fruit -->
-    <a href="bloxfruit.html">
-      <img src="bloxfruit-banner.jpg"
-      style="
-      width:100%;
-      border-radius:14px;
-      box-shadow:0 0 15px #00ff66;
-      ">
-    </a>
-
-    <!-- Escape Tsunami -->
-    <a href="escape-tsunami.html">
-      <img src="escape-tsunami-banner.jpg"
-      style="
-      width:100%;
-      border-radius:14px;
-      box-shadow:0 0 15px #00ff66;
-      ">
-    </a>
-
-    <!-- FPS Flick -->
-    <a href="fps-flick.html">
-      <img src="fps-flick-banner.jpg"
-      style="
-      width:100%;
-      border-radius:14px;
-      box-shadow:0 0 15px #00ff66;
-      ">
-    </a>
-
+  <!-- Blox Fruit -->
+  <div class="card">
+    <img src="bloxfruit-banner.jpg">
+    <h2>Blox Fruit</h2>
+    <a href="bloxfruit.html" class="btn">ดูสคริปทั้งหมด</a>
   </div>
+
+  <!-- FPS Flick -->
+  <div class="card">
+    <img src="fps-flick-banner.jpg">
+    <h2>[FPS] Flick</h2>
+    <a href="fps-flick.html" class="btn">ดูสคริปทั้งหมด</a>
+  </div>
+
+  <!-- Escape Tsunami -->
+  <div class="card">
+    <img src="escape-tsunami-banner.jpg">
+    <h2>Escape Tsunami</h2>
+    <a href="escape-tsunami.html" class="btn">ดูสคริปทั้งหมด</a>
+  </div>
+
 </div>
 
 </body>
