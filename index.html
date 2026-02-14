@@ -2,183 +2,140 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Kraphat Free Script Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kraphat Free Script</title>
 
 <style>
 body{
     margin:0;
-    background:#000;
-    color:#00ff88;
-    font-family: Arial, sans-serif;
-    text-align:center;
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
 }
 
-/* ===== Neon Banner ===== */
-.header-img{
-    margin:30px auto;
-}
-.header-img img{
-    max-width:95%;
-    border-radius:20px;
-    box-shadow:0 0 15px #00ff88,0 0 40px #00ff88;
-    animation: neon 2s infinite alternate;
-}
-@keyframes neon{
-    from{box-shadow:0 0 15px #00ff88;}
-    to{box-shadow:0 0 60px #00ff88;}
-}
-
-/* ===== Status ===== */
-.status{
+/* ===== Header ===== */
+.header{
+    background:#fff;
+    padding:10px;
     display:flex;
-    justify-content:center;
-    gap:15px;
-    margin:20px 0;
+    align-items:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.1);
 }
-.badge{
-    border:1px solid #00ff88;
-    padding:8px 15px;
-    border-radius:20px;
-    box-shadow:0 0 10px #00ff88;
+
+.header img{
+    height:40px;
+    margin-right:10px;
+}
+
+.header h2{
+    margin:0;
+    font-size:18px;
 }
 
 /* ===== Card ===== */
-.card{
-    width:90%;
-    max-width:700px;
-    margin:20px auto;
-    padding:20px;
-    border-radius:15px;
-    background:#050505;
-    box-shadow:0 0 25px #00ff88;
-}
-
-pre{
-    text-align:left;
-    background:#000;
+.container{
     padding:15px;
-    border-radius:10px;
-    overflow-x:auto;
-    color:#00ff88;
 }
 
-button{
-    margin-top:10px;
-    padding:10px 25px;
-    background:#00ff88;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
+.card{
+    background:#fff;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+    overflow:hidden;
+}
+
+.card img{
+    width:100%;
+    display:block;
+}
+
+.card-body{
+    padding:15px;
+}
+
+.card-body h3{
+    margin:0 0 8px;
+}
+
+.card-body p{
+    color:#666;
+    font-size:14px;
+}
+
+.btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    background:#e60000;
+    color:#fff;
+    padding:12px;
+    border-radius:8px;
+    text-decoration:none;
     font-weight:bold;
-}
-button:hover{
-    box-shadow:0 0 20px #00ff88;
-}
-
-.warning{
-    margin:40px;
-    color:#ffaa00;
+    margin-top:10px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- ===== Banner ===== -->
-<div class="header-img">
-    <img src="banner.png" alt="Kraphat Script Hub">
+<!-- Header -->
+<div class="header">
+    <img src="banner.png">
+    <h2>Kraphat Free Script</h2>
 </div>
 
-<h1>☣ Kraphat Free Script Hub ☣</h1>
+<div class="container">
 
-<div class="status">
-    <div class="badge">ONLINE</div>
-    <div class="badge">Scripts: 8+</div>
-    <div class="badge">Games: Multi</div>
-</div>
-
-<!-- ===== ALL IN ONE HUB ===== -->
+<!-- Flick -->
 <div class="card">
-<h3>☣ Kraphat ULTIMATE Script Hub (ALL IN ONE)</h3>
-<pre id="hub">loadstring(game:HttpGet("https://raw.githubusercontent.com/KFC-sta/kraphat-free-script/main/hub.lua"))()</pre>
-<button onclick="copy('hub')">📋 Copy Script</button>
+    <img src="https://i.imgur.com/JZ6G9xF.jpg">
+    <div class="card-body">
+        <h3>🔥 Flick Script</h3>
+        <p>สคริป Flick / Syrex Hub</p>
+        <a class="btn" href="https://raw.githubusercontent.com/Joshington123/JoshScript/refs/heads/main/SyrexhubSniper" target="_blank">
+            ดู / คัดลอกสคริป
+        </a>
+    </div>
 </div>
 
-<!-- ===== Flick ===== -->
+<!-- Blox Fruits OmGshit -->
 <div class="card">
-<h3>🔥 Flick</h3>
-<pre id="s1">loadstring(game:HttpGet("https://raw.githubusercontent.com/Joshington123/JoshScript/refs/heads/main/SyrexhubSniper"))()</pre>
-<button onclick="copy('s1')">📋 Copy Script</button>
+    <img src="https://i.imgur.com/5z7QkXz.jpg">
+    <div class="card-body">
+        <h3>🍎 Blox Fruits (OmGshit)</h3>
+        <p>ฟาร์ม / Auto / ครบ</p>
+        <a class="btn" href="https://raw.githubusercontent.com/OmGshit/Scripts/main/MainLoader.lua" target="_blank">
+            ดู / คัดลอกสคริป
+        </a>
+    </div>
 </div>
 
-<!-- ===== Blox Fruits OmGshit ===== -->
+<!-- Dragon Hub -->
 <div class="card">
-<h3>🍎 Blox Fruits (OmGshit)</h3>
-<pre id="s2">loadstring(game:HttpGet("https://raw.githubusercontent.com/OmGshit/Scripts/main/MainLoader.lua"))()</pre>
-<button onclick="copy('s2')">📋 Copy Script</button>
+    <img src="https://i.imgur.com/JN0sH0r.jpg">
+    <div class="card-body">
+        <h3>🐉 Blox Fruits (Dragon Hub)</h3>
+        <p>สายฟาร์ม + PVP</p>
+        <a class="btn" href="https://raw.githubusercontent.com/dragonhubdev/dragonwitheryone/refs/heads/main/Main-BF.lua" target="_blank">
+            ดู / คัดลอกสคริป
+        </a>
+    </div>
 </div>
 
-<!-- ===== Dragon Hub ===== -->
+<!-- Escape Tsunami -->
 <div class="card">
-<h3>🐉 Blox Fruits (Dragon Hub)</h3>
-<pre id="s3">loadstring(game:HttpGet("https://raw.githubusercontent.com/dragonhubdev/dragonwitheryone/refs/heads/main/Main-BF.lua"))()</pre>
-<button onclick="copy('s3')">📋 Copy Script</button>
+    <img src="https://i.imgur.com/9xKZx1D.jpg">
+    <div class="card-body">
+        <h3>🌊 Escape Tsunami</h3>
+        <p>รวมสคริป Brainrots</p>
+        <a class="btn" href="https://raw.githubusercontent.com/Khangdz28/Mains/refs/heads/main/Tsunami" target="_blank">
+            ดู / คัดลอกสคริป
+        </a>
+    </div>
 </div>
 
-<!-- ===== Blox Fruits PVP / FARM ===== -->
-<div class="card">
-<h3>⚔️ Blox Fruits PVP / FARM</h3>
-<pre id="s4">
-local script_mode = "PVP"
-
-local scripts = {
-    [6768505766] = {
-        PVP  = "https://api.luarmor.net/files/v3/loaders/f35c34bae1ac84c122df5214310b8eb.lua",
-        FARM = "https://api.luarmor.net/files/v3/loaders/32b520fd3ef340a3c6f701b6edf48e55.lua"
-    }
-}
-
-local cfg = scripts[game.GameId]
-if not cfg then
-    game:GetService("Players").LocalPlayer:Kick("Game not supported")
-end
-
-loadstring(game:HttpGet(cfg[script_mode]))()
-</pre>
-<button onclick="copy('s4')">📋 Copy Script</button>
 </div>
-
-<!-- ===== Escape Tsunami ===== -->
-<div class="card">
-<h3>🌊 Escape Tsunami – Script 1</h3>
-<pre id="t1">loadstring(game:HttpGet("https://raw.githubusercontent.com/Khangdz28/Mains/refs/heads/main/Tsunami"))()</pre>
-<button onclick="copy('t1')">📋 Copy Script</button>
-</div>
-
-<div class="card">
-<h3>🌊 Escape Tsunami – Token Multiplier</h3>
-<pre id="t2">loadstring(game:HttpGet("https://raw.githubusercontent.com/xerath-devx/ETFB/refs/heads/main/tokenmultiplier.lua"))()</pre>
-<button onclick="copy('t2')">📋 Copy Script</button>
-</div>
-
-<div class="card">
-<h3>🌊 Escape Tsunami – RauSeNia</h3>
-<pre id="t3">loadstring(game:HttpGet("https://raw.githubusercontent.com/thinhdeptrai-netizen/ETFB-1.0/refs/heads/main/EscapeTsunamiForBrainrots-RauSeNia-1.0"))()</pre>
-<button onclick="copy('t3')">📋 Copy Script</button>
-</div>
-
-<div class="warning">
-⚠️ ใช้สคริปต์อย่างระมัดระวัง มีความเสี่ยงโดนแบน
-</div>
-
-<script>
-function copy(id){
-    navigator.clipboard.writeText(
-        document.getElementById(id).innerText
-    );
-    alert("คัดลอก Script แล้ว!");
-}
-</script>
 
 </body>
 </html>
