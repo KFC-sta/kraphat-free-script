@@ -1,78 +1,117 @@
---// 3 ALL IN ONE SCRIPT HUB
---// Neon Style | One Loadstring
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Kraphat Free Script Hub</title>
 
-local ScreenGui = Instance.new("ScreenGui")
-local Main = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local UIStroke = Instance.new("UIStroke")
-local Title = Instance.new("TextLabel")
+<style>
+body{
+  margin:0;
+  background:#000;
+  color:#00ff88;
+  font-family:Arial,sans-serif;
+  text-align:center;
+}
+h1{
+  margin-top:20px;
+  text-shadow:0 0 20px #00ff88;
+}
+.card{
+  width:90%;
+  max-width:700px;
+  margin:20px auto;
+  padding:20px;
+  background:#050505;
+  border-radius:15px;
+  box-shadow:0 0 25px #00ff88;
+}
+pre{
+  text-align:left;
+  background:#000;
+  padding:15px;
+  border-radius:10px;
+  overflow:auto;
+  color:#00ff88;
+  font-size:13px;
+}
+button{
+  margin-top:10px;
+  padding:12px;
+  width:100%;
+  background:#00ff88;
+  border:none;
+  border-radius:10px;
+  font-weight:bold;
+  cursor:pointer;
+}
+button:hover{
+  box-shadow:0 0 20px #00ff88;
+}
+.small{
+  font-size:13px;
+  opacity:0.8;
+}
+</style>
+</head>
 
-ScreenGui.Parent = game.CoreGui
-ScreenGui.Name = "AllInOneHub"
+<body>
 
-Main.Parent = ScreenGui
-Main.BackgroundColor3 = Color3.fromRGB(15, 15, 20)
-Main.Position = UDim2.new(0.35, 0, 0.25, 0)
-Main.Size = UDim2.new(0, 420, 0, 320)
-Main.Active = true
-Main.Draggable = true
+<h1>☣ Kraphat Free Script Hub ☣</h1>
+<p class="small">เลือกสคริป → Copy → วางใน Executor</p>
 
-UICorner.Parent = Main
-UICorner.CornerRadius = UDim.new(0, 16)
+<!-- All in One -->
+<div class="card">
+<h3>🔥 All-in-One Loader</h3>
+<pre id="a1">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/USERNAME/REPO/main/allinone.lua"))()
+</pre>
+<button onclick="copy('a1')">📋 Copy All-in-One</button>
+</div>
 
-UIStroke.Parent = Main
-UIStroke.Thickness = 2
-UIStroke.Color = Color3.fromRGB(0, 255, 255)
-UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+<!-- Flick -->
+<div class="card">
+<h3>🎯 Flick</h3>
+<pre id="s1">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Joshingtonn123/JoshScript/refs/heads/main/SyrexhubSniperOrDie"))()
+</pre>
+<button onclick="copy('s1')">📋 Copy</button>
+</div>
 
-Title.Parent = Main
-Title.Size = UDim2.new(1, 0, 0, 50)
-Title.BackgroundTransparency = 1
-Title.Text = "🔥 3 ALL IN ONE SCRIPT HUB 🔥"
-Title.TextColor3 = Color3.fromRGB(0, 255, 255)
-Title.Font = Enum.Font.GothamBold
-Title.TextSize = 20
+<!-- Blox Fruits 1 -->
+<div class="card">
+<h3>🍎 Blox Fruits (Omgshit)</h3>
+<pre id="s2">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()
+</pre>
+<button onclick="copy('s2')">📋 Copy</button>
+</div>
 
---// Function Create Button
-local function CreateButton(text, posY, callback)
-    local btn = Instance.new("TextButton")
-    btn.Parent = Main
-    btn.Size = UDim2.new(0.9, 0, 0, 45)
-    btn.Position = UDim2.new(0.05, 0, 0, posY)
-    btn.BackgroundColor3 = Color3.fromRGB(25, 25, 35)
-    btn.Text = text
-    btn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    btn.Font = Enum.Font.GothamBold
-    btn.TextSize = 16
+<!-- Blox Fruits 2 -->
+<div class="card">
+<h3>🐉 Blox Fruits (Dragon Hub)</h3>
+<pre id="s3">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dragonhubdev/dragonwitheveryone/refs/heads/main/Main-BF.lua"))()
+</pre>
+<button onclick="copy('s3')">📋 Copy</button>
+</div>
 
-    local c = Instance.new("UICorner", btn)
-    c.CornerRadius = UDim.new(0, 12)
+<!-- Escape Tsunami -->
+<div class="card">
+<h3>🌊 Escape Tsunami</h3>
+<pre id="s4">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Khangdz28/Mains/refs/heads/main/Tsunami"))()
+</pre>
+<button onclick="copy('s4')">📋 Copy</button>
+</div>
 
-    local s = Instance.new("UIStroke", btn)
-    s.Color = Color3.fromRGB(0, 255, 255)
-    s.Thickness = 1.5
+<script>
+function copy(id){
+  navigator.clipboard.writeText(
+    document.getElementById(id).innerText
+  );
+  alert("คัดลอกแล้ว!");
+}
+</script>
 
-    btn.MouseButton1Click:Connect(callback)
-end
-
---// BUTTONS
-
--- Blox Fruits
-CreateButton("🍏 BLOX FRUITS SCRIPT", 70, function()
-    loadstring(game:HttpGet("YOUR_BLOX_FRUITS_SCRIPT_URL"))()
-end)
-
--- Escape Tsunami for Brainrots
-CreateButton("🌊 ESCAPE TSUNAMI (BRAINROTS)", 130, function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/thinhdeptrai-netizen/ETFB-1.0/refs/heads/main/EscapeTsunamiForBrainrots-RauSeNia-1.0"))()
-end)
-
--- Slot Script 3 (ใส่เพิ่มได้)
-CreateButton("⚡ SCRIPT SLOT 3", 190, function()
-    loadstring(game:HttpGet("YOUR_SCRIPT_3_URL"))()
-end)
-
--- Close
-CreateButton("❌ CLOSE HUB", 250, function()
-    ScreenGui:Destroy()
-end)
+</body>
+</html>
