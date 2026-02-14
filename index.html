@@ -1,51 +1,89 @@
---[[ 
- Kraphat Script Hub
- Neon UI | All-in-One
- Map: Escape Tsunami for Brainrots
-]]
+--====================================================
+--  KRAPHAT | ALL IN ONE SCRIPT
+--  One Paste | One Execute | Done
+--====================================================
 
--- Load UI Library
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+-- Anti AFK
+pcall(function()
+    local vu = game:GetService("VirtualUser")
+    game:GetService("Players").LocalPlayer.Idled:Connect(function()
+        vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+        wait(1)
+        vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+    end)
+end)
+
+-- UI Library
+local Library = loadstring(game:HttpGet(
+"https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"
+))()
 
 -- Window
-local Window = Library.CreateLib("✨ Kraphat Script Hub ✨", "Ocean")
+local Window = Library.CreateLib("⚡ KRAPHAT ALL IN ONE ⚡", "DarkTheme")
 
 -- Tabs
-local MainTab = Window:NewTab("🏠 Main")
-local EscapeTab = Window:NewTab("🌊 Escape Tsunami")
-local InfoTab = Window:NewTab("ℹ️ Info")
+local MainTab = Window:NewTab("🏠 MAIN")
+local ETFBTab = Window:NewTab("🌊 Escape Tsunami")
+local ExtraTab = Window:NewTab("🚀 EXTRA")
+local InfoTab = Window:NewTab("ℹ️ INFO")
 
 -- Sections
-local MainSection = MainTab:NewSection("Welcome")
-local EscapeSection = EscapeTab:NewSection("Escape Tsunami Scripts")
-local InfoSection = InfoTab:NewSection("Info")
+local Main = MainTab:NewSection("Main System")
+local ETFB = ETFBTab:NewSection("Escape Tsunami Scripts")
+local Extra = ExtraTab:NewSection("Extra Tools")
+local Info = InfoTab:NewSection("About")
 
--- Main
-MainSection:NewLabel("Neon Script Hub")
-MainSection:NewLabel("รวมทุกสคริปไว้ในที่เดียว")
-MainSection:NewLabel("By Kraphat")
+-- MAIN
+Main:NewLabel("All scripts merged in ONE file")
+Main:NewLabel("Paste once, use forever")
+Main:NewLabel("By Kraphat")
 
--- Escape Tsunami Scripts
-EscapeSection:NewButton("🔥 Script 1 | Auto / Main", "Load Script 1", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Khangdz28/Mains/refs/heads/main/Tsunami"))()
+-- ESCAPE TSUNAMI FOR BRAINROTS
+ETFB:NewButton("🔥 Main Script", "Load main auto script", function()
+    loadstring(game:HttpGet(
+    "https://raw.githubusercontent.com/Khangdz28/Mains/refs/heads/main/Tsunami"
+    ))()
 end)
 
-EscapeSection:NewButton("⚡ Script 2 | Token Multiplier", "Load Script 2", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xerath-devx/ETFB/refs/heads/main/tokenmultiplier.lua"))()
+ETFB:NewButton("⚡ Token Multiplier", "Boost tokens", function()
+    loadstring(game:HttpGet(
+    "https://raw.githubusercontent.com/xerath-devx/ETFB/refs/heads/main/tokenmultiplier.lua"
+    ))()
 end)
 
-EscapeSection:NewButton("🚀 Script 3 | RauSeNia 1.0", "Load Script 3", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/thinhdeptrai-netizen/ETFB-1.0/refs/heads/main/EscapeTsunamiForBrainrots-RauSeNia-1.0"))()
+ETFB:NewButton("🚀 RauSeNia v1.0", "Full feature script", function()
+    loadstring(game:HttpGet(
+    "https://raw.githubusercontent.com/thinhdeptrai-netizen/ETFB-1.0/refs/heads/main/EscapeTsunamiForBrainrots-RauSeNia-1.0"
+    ))()
 end)
 
--- Info
-InfoSection:NewLabel("Executor: Any")
-InfoSection:NewLabel("Status: Working")
-InfoSection:NewLabel("UI: Neon / Ocean Theme")
+-- EXTRA
+Extra:NewButton("🧹 Clear Lag", "Remove lag", function()
+    for _,v in pairs(workspace:GetDescendants()) do
+        if v:IsA("BasePart") then
+            v.Material = Enum.Material.SmoothPlastic
+            v.Reflectance = 0
+        end
+    end
+end)
 
--- Notification
+Extra:NewButton("🚶 WalkSpeed 50", "Speed hack", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+end)
+
+Extra:NewButton("🦘 JumpPower 120", "High jump", function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+end)
+
+-- INFO
+Info:NewLabel("Executor: Any")
+Info:NewLabel("Type: All-In-One Script")
+Info:NewLabel("Paste: ONCE")
+Info:NewLabel("Status: Stable")
+
+-- Notify
 game.StarterGui:SetCore("SendNotification",{
-    Title = "Kraphat Script Hub",
-    Text = "Loaded Successfully!",
+    Title = "KRAPHAT SCRIPT",
+    Text = "All-In-One Loaded Successfully!",
     Duration = 5
 })
