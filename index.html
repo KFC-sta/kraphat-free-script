@@ -2,100 +2,74 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kraphat Script Hub</title>
+<title>Kraphat Free Script Hub</title>
 
 <style>
 body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#050505;
-    color:#00ff88;
+  margin:0;
+  background:#000;
+  color:#00ff88;
+  font-family:Arial,sans-serif;
+  text-align:center;
 }
-
-header{
-    background:url("images/hacker-banner.jpg") center/cover no-repeat;
-    padding:60px 20px;
-    text-align:center;
-    box-shadow:0 0 20px #00ff88;
-}
-
-header h1{
-    font-size:36px;
-    text-shadow:0 0 10px #00ff88;
-}
-
+h1{margin:20px 0;}
 .container{
-    padding:20px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
 }
-
 .card{
-    background:#0b0b0b;
-    border:1px solid #00ff88;
-    border-radius:12px;
-    margin-bottom:20px;
-    overflow:hidden;
-    box-shadow:0 0 15px rgba(0,255,136,0.3);
+  width:300px;
+  margin:20px;
+  padding:15px;
+  background:#050505;
+  border-radius:15px;
+  box-shadow:0 0 20px #00ff88;
 }
-
 .card img{
-    width:100%;
-    display:block;
+  width:100%;
+  border-radius:12px;
+  box-shadow:0 0 15px #00ff88;
 }
-
-.card h2{
-    padding:10px;
-    margin:0;
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 20px;
+  background:#00ff88;
+  color:#000;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:10px;
 }
-
-.card button{
-    width:90%;
-    margin:10px auto 20px;
-    display:block;
-    padding:12px;
-    font-size:18px;
-    border:none;
-    border-radius:30px;
-    background:#00ff88;
-    color:#000;
-    cursor:pointer;
-    box-shadow:0 0 10px #00ff88;
-}
-
-.card button:hover{
-    background:#00cc6a;
+.btn:hover{
+  box-shadow:0 0 20px #00ff88;
 }
 </style>
 </head>
 
 <body>
-
-<header>
-    <h1>💀 KRAPHAT SCRIPT HUB 💀</h1>
-    <p>สคริปทั้งหมด | Hacker Neon Style</p>
-</header>
+<h1>☣ Kraphat Free Script Hub ☣</h1>
 
 <div class="container">
 
-    <div class="card">
-        <img src="images/bloxfruit.jpg" alt="Blox Fruit">
-        <h2>Blox Fruit</h2>
-        <button>ดูสคริปทั้งหมด</button>
-    </div>
+  <div class="card">
+    <img src="bloxfruit-banner.jpg">
+    <h3>Blox Fruits</h3>
+    <a href="bloxfruit.html" class="btn">ดูสคริปทั้งหมด</a>
+  </div>
 
-    <div class="card">
-        <img src="images/fpsflick.jpg" alt="FPS Flick">
-        <h2>[FPS] FLICK</h2>
-        <button>ดูสคริปทั้งหมด</button>
-    </div>
+  <div class="card">
+    <img src="fps-flick-banner.jpg">
+    <h3>[FPS] Flick</h3>
+    <a href="fps-flick.html" class="btn">ดูสคริปทั้งหมด</a>
+  </div>
 
-    <div class="card">
-        <img src="images/escapetsunami.jpg" alt="Escape Tsunami">
-        <h2>Escape Tsunami for Brainrots</h2>
-        <button>ดูสคริปทั้งหมด</button>
-    </div>
+  <div class="card">
+    <img src="escape-tsunami-banner.jpg">
+    <h3>Escape Tsunami for Brainrots</h3>
+    <a href="escape-tsunami.html" class="btn">ดูสคริปทั้งหมด</a>
+  </div>
 
 </div>
-
 </body>
 </html>
