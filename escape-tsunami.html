@@ -2,15 +2,100 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Escape Tsunami Script</title>
+
+<style>
+body{
+  margin:0;
+  background:#000;
+  color:#fff;
+  font-family:sans-serif;
+  text-align:center;
+}
+
+/* ปุ่มกลับ */
+.back{
+  display:inline-block;
+  margin:20px;
+  padding:10px 20px;
+  border-radius:12px;
+  background:#00ff88;
+  color:#000;
+  font-weight:bold;
+  text-decoration:none;
+  box-shadow:0 0 15px #00ff88;
+}
+
+/* กล่องหลัก */
+.box{
+  width:90%;
+  max-width:700px;
+  margin:auto;
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 0 25px #00ff88;
+  background:#0a0a0a;
+}
+
+/* กล่องสคริปต์ */
+.script{
+  background:#000;
+  padding:15px;
+  border-radius:10px;
+  word-break:break-all;
+  margin-bottom:15px;
+  border:1px solid #00ff88;
+}
+
+/* ปุ่ม copy */
+button{
+  background:#00ff88;
+  border:none;
+  padding:12px 25px;
+  border-radius:12px;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 0 15px #00ff88;
+}
+
+.date{
+  margin-top:10px;
+  font-size:14px;
+  color:#00ff88;
+}
+</style>
 </head>
-<body style="background:#0f0f0f;color:white;text-align:center;">
+
+<body>
+
+<a href="index.html" class="back">🔙 กลับหน้าแรก</a>
 
 <h1>Escape Tsunami Script</h1>
 
-<pre>
+<div class="box">
+
+<div class="script" id="scriptText">
 loadstring(game:HttpGet("https://raw.githubusercontent.com/meobeo8/a/a/a"))()
-</pre>
+</div>
+
+<button onclick="copyScript()">COPY SCRIPT</button>
+
+<div class="date" id="date"></div>
+
+</div>
+
+<script>
+function copyScript(){
+  var text = document.getElementById("scriptText").innerText;
+  navigator.clipboard.writeText(text);
+  alert("คัดลอกสคริปต์แล้ว!");
+}
+
+const d = new Date();
+document.getElementById("date").innerHTML =
+"อัปเดตล่าสุด: " + d.toLocaleDateString("th-TH");
+</script>
 
 </body>
 </html>
