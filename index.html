@@ -2,61 +2,81 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>Kraphat Script Hub</title>
+  <title>Kraphat ScriptHub</title>
 
   <style>
     body{
       margin:0;
-      font-family:sans-serif;
-      background:#f5f5f5;
+      font-family: sans-serif;
+      background: #0f0f0f;
+      color: white;
+      text-align:center;
     }
 
-    header{
-      padding:15px;
-      font-size:22px;
-      font-weight:bold;
-      background:white;
-      box-shadow:0 2px 5px rgba(0,0,0,0.2);
+    header img{
+      width:100%;
+      max-height:250px;
+      object-fit:cover;
     }
 
     .container{
-      padding:15px;
+      padding:30px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:25px;
     }
 
     .card{
-      background:white;
-      border-radius:20px;
-      margin-bottom:20px;
+      background:#111;
+      width:300px;
+      border-radius:15px;
       overflow:hidden;
-      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+      box-shadow:0 0 20px #00f7ff33;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 25px #00f7ff;
     }
 
     .card img{
       width:100%;
-      display:block;
+      height:170px;
+      object-fit:cover;
     }
 
     .card-content{
       padding:15px;
     }
 
-    .btn{
-      display:block;
-      background:red;
-      color:white;
-      text-align:center;
-      padding:15px;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:bold;
+    .neon-btn{
+      display:inline-block;
       margin-top:10px;
+      padding:10px 20px;
+      color:#00f7ff;
+      border:2px solid #00f7ff;
+      border-radius:10px;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .neon-btn:hover{
+      background:#00f7ff;
+      color:black;
+      box-shadow:0 0 15px #00f7ff;
     }
   </style>
 </head>
 
 <body>
 
-<header>Kraphat Script Hub</header>
+<header>
+  <img src="banner.png">
+</header>
+
+<h1>Kraphat ScriptHub</h1>
 
 <div class="container">
 
@@ -64,9 +84,9 @@
   <div class="card">
     <img src="bloxfruit-banner.jpg">
     <div class="card-content">
-      <h2>สคริปต์ BLOXFRUIT</h2>
-      <p>รวมสคริปต์ทั้งหมดสำหรับแมพ Bloxfruit</p>
-      <a href="bloxfruit.html" class="btn">สคริปต์ทั้งหมด</a>
+      <h2>BloxFruit</h2>
+      <p>รวมสคริปต์ทั้งหมดสำหรับ BloxFruit</p>
+      <a href="bloxfruit.html" class="neon-btn">สคริปต์ทั้งหมด</a>
     </div>
   </div>
 
@@ -74,19 +94,19 @@
   <div class="card">
     <img src="escape-tsunami-banner.jpg">
     <div class="card-content">
-      <h2>สคริปต์ ESCAPE TSUNAMI</h2>
-      <p>รวมสคริปต์ทั้งหมดสำหรับแมพ Escape Tsunami</p>
-      <a href="escape-tsunami.html" class="btn">สคริปต์ทั้งหมด</a>
+      <h2>Escape Tsunami</h2>
+      <p>รวมสคริปต์ทั้งหมดสำหรับ Escape Tsunami</p>
+      <a href="escape-tsunami.html" class="neon-btn">สคริปต์ทั้งหมด</a>
     </div>
   </div>
 
-  <!-- FPS -->
+  <!-- FPS FLICK -->
   <div class="card">
     <img src="fps-flick-banner.jpg">
     <div class="card-content">
-      <h2>สคริปต์ FPS</h2>
-      <p>รวมสคริปต์ทั้งหมดสำหรับแมพ FPS</p>
-      <a href="fps.html" class="btn">สคริปต์ทั้งหมด</a>
+      <h2>FPS Flick</h2>
+      <p>รวมสคริปต์ทั้งหมดสำหรับ FPS Flick</p>
+      <a href="fps-flick.html" class="neon-btn">สคริปต์ทั้งหมด</a>
     </div>
   </div>
 
