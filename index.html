@@ -3,86 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <title>Kraphat Free Script</title>
-
   <style>
-    body{
-      margin:0;
-      font-family:sans-serif;
-      background:black;
-      color:#00ff88;
-      text-align:center;
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #0f0f0f;
+      color: white;
+      text-align: center;
     }
 
-    /* 🔥 Banner */
-    .banner img{
-      width:95%;
-      max-width:500px;
-      margin-top:15px;
-      border-radius:20px;
-      box-shadow:0 0 25px #00ff88;
+    .banner {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
     }
 
-    /* 🔥 กล่องสคริป */
-    .card{
-      background:#0a0a0a;
-      margin:15px auto;
-      padding:15px;
-      width:90%;
-      max-width:400px;
-      border-radius:20px;
-      box-shadow:0 0 20px #00ff88;
+    h1 {
+      margin: 20px 0;
     }
 
-    .card img{
-      width:100%;
-      border-radius:15px;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
     }
 
-    .title{
-      font-size:22px;
-      margin:10px 0;
+    .card {
+      background: #1c1c1c;
+      border-radius: 15px;
+      width: 250px;
+      overflow: hidden;
+      transition: 0.3s;
     }
 
-    /* 🔥 ปุ่ม */
-    .btn{
-      display:block;
-      background:#00ff88;
-      color:black;
-      padding:12px;
-      border-radius:15px;
-      text-decoration:none;
-      margin-top:10px;
-      font-weight:bold;
+    .card:hover {
+      transform: scale(1.05);
     }
 
+    .card img {
+      width: 100%;
+    }
+
+    .card a {
+      display: block;
+      padding: 15px;
+      color: white;
+      text-decoration: none;
+      background: #ff7b00;
+    }
   </style>
 </head>
 <body>
 
-<!-- 🔥 แบนเนอร์ -->
-<div class="banner">
-  <img src="banner.png">
-</div>
+<img src="banner.png" class="banner">
 
-<!-- 🔥 FPS Flick -->
-<div class="card">
-  <img src="https://i.postimg.cc/prg5nKXL/IMG-20260213-223736.jpg">
-  <div class="title">FPS Flick</div>
-  <a class="btn" href="fps.html">ดูสคริปทั้งหมด</a>
-</div>
+<h1>Kraphat Free Script</h1>
 
-<!-- 🔥 Escape Tsunami -->
-<div class="card">
-  <img src="https://i.postimg.cc/3xB9H0Jp/IMG-20260213-223724.jpg">
-  <div class="title">Escape Tsunami</div>
-  <a class="btn" href="tsunami.html">ดูสคริปทั้งหมด</a>
-</div>
+<div class="container">
 
-<!-- 🔥 Blox Fruit -->
-<div class="card">
-  <img src="https://i.postimg.cc/SRZqP9h4/IMG-20260213-223750.jpg">
-  <div class="title">Blox Fruit</div>
-  <a class="btn" href="bloxfruit.html">ดูสคริปทั้งหมด</a>
+  <!-- Bloxfruit -->
+  <div class="card">
+    <img src="bloxfruit-banner.jpg">
+    <a href="bloxfruit.html">Bloxfruit Script</a>
+  </div>
+
+  <!-- Escape Tsunami -->
+  <div class="card">
+    <img src="escape-tsunami-banner.jpg">
+    <a href="escape-tsunami.html">Escape Tsunami Script</a>
+  </div>
+
+  <!-- FPS Flick -->
+  <div class="card">
+    <img src="fps-flick-banner.jpg">
+    <a href="fps-flick.html">FPS Flick Script</a>
+  </div>
+
 </div>
 
 </body>
