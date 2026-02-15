@@ -1,103 +1,89 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kraphat Free Script</title>
+  <meta charset="UTF-8">
+  <title>Kraphat Free Script</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #0f0f0f;
+      color: white;
+      text-align: center;
+    }
 
-<style>
-body{
-  margin:0;
-  font-family:sans-serif;
-  background:#050505;
-  color:white;
-  text-align:center;
-}
+    .banner img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+    }
 
-/* 🔥 banner เห็นเลโก้เต็ม */
-.banner{
-  width:100%;
-  height:auto;
-  display:block;
-}
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
 
-/* หัวข้อ */
-h1{
-  margin:20px 0;
-  font-size:28px;
-}
+    .card {
+      background: #1c1c1c;
+      border-radius: 15px;
+      padding: 15px;
+      transition: 0.3s;
+    }
 
-/* กล่องรวมการ์ด */
-.container{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-  padding:10px 15px 40px;
-}
+    .card:hover {
+      transform: scale(1.05);
+    }
 
-/* การ์ดนีออน */
-.card{
-  width:140px;
-  background:#0b0b0b;
-  border-radius:18px;
-  padding-bottom:12px;
-  box-shadow:0 0 15px #00ff88;
-  transition:.25s;
-}
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-.card:hover{
-  transform:scale(1.05);
-}
-
-/* รูปในการ์ด */
-.card img{
-  width:100%;
-  height:90px;
-  object-fit:cover;
-  border-radius:18px 18px 0 0;
-}
-
-/* ปุ่ม */
-.btn{
-  margin:12px;
-  padding:10px;
-  border-radius:12px;
-  background:#00ff88;
-  color:#003322;
-  font-weight:bold;
-  text-decoration:none;
-  display:block;
-  box-shadow:0 0 10px #00ff88;
-}
-</style>
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #ff0033;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- 🔥 banner -->
-<img src="banner.png" class="banner">
-
-<h1>Kraphat Free Script</h1>
-
-<div class="container">
-
-  <div class="card">
-    <img src="bloxfruit-banner.jpg">
-    <a href="bloxfruit.html" class="btn">ดูสคริปทั้งหมด</a>
+  <div class="banner">
+    <img src="banner.png">
   </div>
 
-  <div class="card">
-    <img src="escape-tsunami-banner.jpg">
-    <a href="escape-tsunami.html" class="btn">ดูสคริปทั้งหมด</a>
-  </div>
+  <h1>Kraphat Free Script Hub</h1>
 
-  <div class="card">
-    <img src="fps-flick-banner.jpg">
-    <a href="fps-flick.html" class="btn">ดูสคริปทั้งหมด</a>
-  </div>
+  <div class="container">
 
-</div>
+    <!-- BLOXFRUIT -->
+    <div class="card">
+      <img src="bloxfruit-banner.jpg">
+      <h2>Blox Fruit</h2>
+      <a href="bloxfruit.html" class="btn">ดูสคริป</a>
+    </div>
+
+    <!-- ESCAPE TSUNAMI -->
+    <div class="card">
+      <img src="escape-tsunami-banner.jpg">
+      <h2>Escape Tsunami</h2>
+      <a href="escape-tsunami.html" class="btn">ดูสคริป</a>
+    </div>
+
+    <!-- FPS FLICK -->
+    <div class="card">
+      <img src="fps-flick-banner.jpg">
+      <h2>FPS Flick / Syrex</h2>
+      <a href="fps-flick.html" class="btn">ดูสคริป</a>
+    </div>
+
+  </div>
 
 </body>
 </html>
