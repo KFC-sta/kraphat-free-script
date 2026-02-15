@@ -1,84 +1,95 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <title>Kraphat Free Script</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #0f0f0f;
-      color: white;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kraphat Free Script</title>
 
-    .banner {
-      width: 100%;
-      max-height: 250px;
-      object-fit: cover;
-    }
+<style>
+body{
+  margin:0;
+  font-family:sans-serif;
+  background:#0b0b0b;
+  color:white;
+  text-align:center;
+}
 
-    h1 {
-      margin: 20px 0;
-    }
+/* 🔥 banner เต็มจอ */
+.banner{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+}
 
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
+/* หัวเว็บ */
+h1{
+  margin:15px 0 5px;
+}
 
-    .card {
-      background: #1c1c1c;
-      border-radius: 15px;
-      width: 250px;
-      overflow: hidden;
-      transition: 0.3s;
-    }
+/* กล่องรวม */
+.container{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  padding:10px;
+}
 
-    .card:hover {
-      transform: scale(1.05);
-    }
+/* การ์ด */
+.card{
+  background:#111;
+  width:110px;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 0 10px #000;
+  transition:.25s;
+}
 
-    .card img {
-      width: 100%;
-    }
+.card:hover{
+  transform:scale(1.05);
+}
 
-    .card a {
-      display: block;
-      padding: 15px;
-      color: white;
-      text-decoration: none;
-      background: #ff7b00;
-    }
-  </style>
+/* รูปในการ์ด */
+.card img{
+  width:100%;
+  height:70px;
+  object-fit:cover;
+}
+
+/* ปุ่ม */
+.btn{
+  background:#ff7a00;
+  padding:8px;
+  display:block;
+  color:white;
+  text-decoration:none;
+  font-size:13px;
+}
+</style>
 </head>
+
 <body>
 
+<!-- 🔥 banner -->
 <img src="banner.png" class="banner">
 
 <h1>Kraphat Free Script</h1>
 
 <div class="container">
 
-  <!-- Bloxfruit -->
   <div class="card">
     <img src="bloxfruit-banner.jpg">
-    <a href="bloxfruit.html">Bloxfruit Script</a>
+    <a href="bloxfruit.html" class="btn">Bloxfruit Script</a>
   </div>
 
-  <!-- Escape Tsunami -->
   <div class="card">
     <img src="escape-tsunami-banner.jpg">
-    <a href="escape-tsunami.html">Escape Tsunami Script</a>
+    <a href="escape-tsunami.html" class="btn">Escape Tsunami Script</a>
   </div>
 
-  <!-- FPS Flick -->
   <div class="card">
     <img src="fps-flick-banner.jpg">
-    <a href="fps-flick.html">FPS Flick Script</a>
+    <a href="fps-flick.html" class="btn">FPS Flick Script</a>
   </div>
 
 </div>
