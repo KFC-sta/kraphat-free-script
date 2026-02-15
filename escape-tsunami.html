@@ -2,40 +2,30 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>FPS Flick Script</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tsunami Script</title>
 </head>
 
-<body style="margin:0;background:#000;color:#00ff66;font-family:Arial;text-align:center">
+<body style="background:#000;color:#00ff88;font-family:Arial;text-align:center">
 
-<h1 style="text-shadow:0 0 15px #00ff66">FPS Flick</h1>
+<h1>Escape Tsunami Script</h1>
 
-<textarea style="
-width:90%;
-height:120px;
-background:#000;
-color:#00ff66;
-border:2px solid #00ff66;
-border-radius:12px;
-box-shadow:0 0 15px #00ff66;
-">
--- ใส่สคริปคุณตรงนี้
+<textarea id="tsunami" style="width:90%;height:120px;border-radius:10px;">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/meobeo8/a/a/a"))()
 </textarea>
 
 <br><br>
 
-<a href="index.html"
-style="
-display:inline-block;
-padding:12px 30px;
-background:#00ff66;
-color:#000;
-border-radius:30px;
-text-decoration:none;
-box-shadow:0 0 20px #00ff66;
-">
-⬅ กลับหน้าแรก
-</a>
+<button onclick="copy('tsunami')" style="padding:12px 25px;border-radius:25px;background:#00ff88;border:none;font-weight:bold;">
+Copy Script
+</button>
+
+<script>
+function copy(id){
+var text = document.getElementById(id);
+text.select();
+document.execCommand("copy");
+}
+</script>
 
 </body>
 </html>
