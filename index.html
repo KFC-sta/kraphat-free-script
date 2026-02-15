@@ -2,73 +2,50 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Script Hub</title>
+<title>Kraphat Free Script</title>
 
 <style>
 body{
   margin:0;
-  background:#000;
   font-family:Arial, sans-serif;
-  color:#00ff66;
+  background:#000;
+  color:#00ff88;
 }
 
 .container{
-  max-width:420px;
-  margin:30px auto;
+  max-width:400px;
+  margin:auto;
   padding:20px;
 }
 
 .card{
-  background:#020a05;
-  border:2px solid #00ff66;
-  border-radius:18px;
-  padding:18px;
-  box-shadow:0 0 25px #00ff66;
+  background:#001a0f;
+  border-radius:20px;
+  padding:15px;
+  margin-bottom:25px;
+  box-shadow:0 0 25px #00ff88;
+  text-align:center;
 }
 
-.banner{
+.card img{
   width:100%;
-  border-radius:14px;
-  margin-bottom:15px;
+  border-radius:15px;
 }
 
 .title{
-  font-size:22px;
-  font-weight:bold;
-  margin-bottom:8px;
+  font-size:24px;
+  margin:15px 0;
+  text-shadow:0 0 10px #00ff88;
 }
 
-.info{
-  font-size:14px;
-  opacity:0.9;
-  margin-bottom:10px;
-}
-
-.code-box{
-  background:#000;
-  border:1px solid #00ff66;
-  border-radius:10px;
-  padding:12px;
-  font-family:monospace;
-  font-size:14px;
-  word-break:break-all;
-  margin-bottom:14px;
-}
-
-.copy-btn{
-  width:100%;
+.btn{
+  display:block;
+  background:#00ff88;
+  color:#000;
   padding:14px;
-  background:#00ff66;
-  border:none;
   border-radius:30px;
-  font-size:18px;
+  text-decoration:none;
   font-weight:bold;
-  cursor:pointer;
-  box-shadow:0 0 20px #00ff66;
-}
-
-.copy-btn:active{
-  transform:scale(0.97);
 }
 </style>
 </head>
@@ -77,37 +54,28 @@ body{
 
 <div class="container">
 
+  <!-- FPS -->
   <div class="card">
+    <img src="fps-flick-banner.jpg">
+    <div class="title">[FPS] Flick</div>
+    <a href="fps-flick.html" class="btn">ดูสคริปทั้งหมด</a>
+  </div>
 
-    <!-- รูปแบนเนอร์ -->
-    <img src="escape-tsunami-banner.jpg" class="banner">
+  <!-- TSUNAMI -->
+  <div class="card">
+    <img src="escape-tsunami-banner.jpg">
+    <div class="title">Escape Tsunami</div>
+    <a href="escape-tsunami.html" class="btn">ดูสคริปทั้งหมด</a>
+  </div>
 
-    <!-- ชื่อ -->
-    <div class="title">Escape Tsunami For Brainrots</div>
-
-    <!-- รายละเอียด -->
-    <div class="info">👤 ผู้สร้าง: Rozz-Admin</div>
-    <div class="info">📅 เพิ่มเมื่อ: 13/2/2569</div>
-
-    <!-- ลิงก์สคริปต์ -->
-    <div class="code-box" id="script">
-https://pastebin.com/yRpOHbeX
-    </div>
-
-    <!-- ปุ่มคัดลอก -->
-    <button class="copy-btn" onclick="copyScript()">📋 Copy Script</button>
-
+  <!-- BLOXFRUIT -->
+  <div class="card">
+    <img src="bloxfruit-banner.jpg">
+    <div class="title">Blox Fruit</div>
+    <a href="bloxfruit.html" class="btn">ดูสคริปทั้งหมด</a>
   </div>
 
 </div>
-
-<script>
-function copyScript(){
-  const text = document.getElementById("script").innerText;
-  navigator.clipboard.writeText(text);
-  alert("คัดลอกสคริปต์แล้ว!");
-}
-</script>
 
 </body>
 </html>
