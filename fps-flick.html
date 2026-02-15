@@ -2,86 +2,54 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>FPS Flick Script</title>
+<title>FPS Script</title>
+
+<style>
+body{background:#000;color:#00ff88;font-family:Arial;text-align:center}
+.box{
+background:#001a0f;
+margin:30px;
+padding:20px;
+border-radius:20px;
+box-shadow:0 0 25px #00ff88;
+}
+textarea{
+width:90%;
+height:120px;
+border-radius:10px;
+border:none;
+padding:10px;
+}
+button{
+margin-top:15px;
+background:#00ff88;
+border:none;
+padding:12px 25px;
+border-radius:25px;
+font-weight:bold;
+}
+</style>
 </head>
 
-<body style="
-margin:0;
-background:#000;
-color:#00ff66;
-font-family:Arial, sans-serif;
-">
+<body>
 
-<h1 style="
-text-align:center;
-padding:20px 0;
-text-shadow:0 0 10px #00ff66,0 0 25px #00ff66;
-">
-[FPS] FLICK Script
-</h1>
+<h1>FPS Script</h1>
 
-<div style="display:flex;justify-content:center;">
-  <div style="
-  width:90%;
-  max-width:420px;
-  background:#000;
-  border-radius:16px;
-  box-shadow:0 0 25px #00ff66;
-  padding:16px;
-  ">
-
-    <!-- รูปแมพ -->
-    <img src="fps-flick-banner.jpg" style="
-    width:100%;
-    border-radius:12px;
-    box-shadow:0 0 15px #00ff66;
-    ">
-
-    <!-- SCRIPT -->
-    <textarea readonly style="
-    width:100%;
-    height:120px;
-    margin-top:14px;
-    background:#000;
-    color:#00ff66;
-    border:2px solid #00ff66;
-    border-radius:10px;
-    padding:10px;
-    ">
+<div class="box">
+<textarea id="fps">
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Joshingtonn123/JoshScript/refs/heads/main/SyrexhubSniperOrDie"))()
-    </textarea>
-
-    <!-- COPY BUTTON -->
-    <button onclick="
-navigator.clipboard.writeText(this.previousElementSibling.value)
-" style="
-width:100%;
-margin-top:12px;
-padding:14px;
-border:none;
-border-radius:30px;
-background:#00ff66;
-color:#000;
-font-size:16px;
-font-weight:bold;
-box-shadow:0 0 15px #00ff66;
-">
-📋 Copy Script
-    </button>
-
-    <!-- BACK -->
-    <a href="index.html" style="
-display:block;
-margin-top:14px;
-text-align:center;
-color:#00ff66;
-text-decoration:none;
-">
-⬅ กลับหน้าแรก
-    </a>
-
-  </div>
+</textarea>
+<br>
+<button onclick="copy('fps')">Copy Script</button>
 </div>
+
+<script>
+function copy(id){
+  var text = document.getElementById(id);
+  text.select();
+  document.execCommand("copy");
+}
+</script>
 
 </body>
 </html>
