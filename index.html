@@ -9,39 +9,40 @@
 body{
   margin:0;
   font-family:sans-serif;
-  background:#0b0b0b;
+  background:#050505;
   color:white;
   text-align:center;
 }
 
-/* 🔥 banner เต็มจอ */
+/* 🔥 banner เห็นเลโก้เต็ม */
 .banner{
   width:100%;
-  height:230px;
-  object-fit:cover;
+  height:auto;
+  display:block;
 }
 
-/* หัวเว็บ */
+/* หัวข้อ */
 h1{
-  margin:15px 0 5px;
+  margin:20px 0;
+  font-size:28px;
 }
 
-/* กล่องรวม */
+/* กล่องรวมการ์ด */
 .container{
   display:flex;
   justify-content:center;
-  gap:15px;
+  gap:20px;
   flex-wrap:wrap;
-  padding:10px;
+  padding:10px 15px 40px;
 }
 
-/* การ์ด */
+/* การ์ดนีออน */
 .card{
-  background:#111;
-  width:110px;
-  border-radius:12px;
-  overflow:hidden;
-  box-shadow:0 0 10px #000;
+  width:140px;
+  background:#0b0b0b;
+  border-radius:18px;
+  padding-bottom:12px;
+  box-shadow:0 0 15px #00ff88;
   transition:.25s;
 }
 
@@ -52,18 +53,22 @@ h1{
 /* รูปในการ์ด */
 .card img{
   width:100%;
-  height:70px;
+  height:90px;
   object-fit:cover;
+  border-radius:18px 18px 0 0;
 }
 
 /* ปุ่ม */
 .btn{
-  background:#ff7a00;
-  padding:8px;
-  display:block;
-  color:white;
+  margin:12px;
+  padding:10px;
+  border-radius:12px;
+  background:#00ff88;
+  color:#003322;
+  font-weight:bold;
   text-decoration:none;
-  font-size:13px;
+  display:block;
+  box-shadow:0 0 10px #00ff88;
 }
 </style>
 </head>
@@ -79,17 +84,17 @@ h1{
 
   <div class="card">
     <img src="bloxfruit-banner.jpg">
-    <a href="bloxfruit.html" class="btn">Bloxfruit Script</a>
+    <a href="bloxfruit.html" class="btn">ดูสคริปทั้งหมด</a>
   </div>
 
   <div class="card">
     <img src="escape-tsunami-banner.jpg">
-    <a href="escape-tsunami.html" class="btn">Escape Tsunami Script</a>
+    <a href="escape-tsunami.html" class="btn">ดูสคริปทั้งหมด</a>
   </div>
 
   <div class="card">
     <img src="fps-flick-banner.jpg">
-    <a href="fps-flick.html" class="btn">FPS Flick Script</a>
+    <a href="fps-flick.html" class="btn">ดูสคริปทั้งหมด</a>
   </div>
 
 </div>
