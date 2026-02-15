@@ -1,89 +1,102 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <title>Kraphat Free Script</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #0f0f0f;
-      color: white;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<title>Kraphat Free Script Hub</title>
 
-    .banner img {
-      width: 100%;
-      max-height: 250px;
-      object-fit: cover;
-    }
+<style>
+body{
+  margin:0;
+  background:#000;
+  font-family:sans-serif;
+  color:white;
+  text-align:center;
+}
 
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
+/* แบนเนอร์ */
+.banner img{
+  width:100%;
+  display:block;
+}
 
-    .card {
-      background: #1c1c1c;
-      border-radius: 15px;
-      padding: 15px;
-      transition: 0.3s;
-    }
+/* หัวข้อ */
+h1{
+  margin:20px 0;
+  font-size:28px;
+}
 
-    .card:hover {
-      transform: scale(1.05);
-    }
+/* กล่องรวม */
+.container{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+  padding-bottom:40px;
+}
 
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
+/* การ์ด */
+.card{
+  background:#111;
+  border-radius:20px;
+  width:280px;
+  padding:15px;
+  box-shadow:0 0 25px #00ff99;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #ff0033;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-    }
-  </style>
+/* รูป */
+.card img{
+  width:100%;
+  border-radius:15px;
+}
+
+/* ปุ่มนีออน */
+.btn{
+  display:block;
+  margin-top:15px;
+  padding:14px;
+  border-radius:12px;
+  background:#00ff99;
+  color:black;
+  font-size:18px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 0 20px #00ff99;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 35px #00ff99;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="banner">
-    <img src="banner.png">
+<div class="banner">
+  <img src="banner.png">
+</div>
+
+<h1>Kraphat Free Script Hub</h1>
+
+<div class="container">
+
+  <div class="card">
+    <img src="bloxfruit-banner.jpg">
+    <a href="bloxfruit.html" class="btn">ดูสคริปทั้งหมด</a>
   </div>
 
-  <h1>Kraphat Free Script Hub</h1>
-
-  <div class="container">
-
-    <!-- BLOXFRUIT -->
-    <div class="card">
-      <img src="bloxfruit-banner.jpg">
-      <h2>Blox Fruit</h2>
-      <a href="bloxfruit.html" class="btn">ดูสคริป</a>
-    </div>
-
-    <!-- ESCAPE TSUNAMI -->
-    <div class="card">
-      <img src="escape-tsunami-banner.jpg">
-      <h2>Escape Tsunami</h2>
-      <a href="escape-tsunami.html" class="btn">ดูสคริป</a>
-    </div>
-
-    <!-- FPS FLICK -->
-    <div class="card">
-      <img src="fps-flick-banner.jpg">
-      <h2>FPS Flick / Syrex</h2>
-      <a href="fps-flick.html" class="btn">ดูสคริป</a>
-    </div>
-
+  <div class="card">
+    <img src="escape-tsunami-banner.jpg">
+    <a href="escape-tsunami.html" class="btn">ดูสคริปทั้งหมด</a>
   </div>
+
+  <div class="card">
+    <img src="fps-flick-banner.jpg">
+    <a href="fps-flick.html" class="btn">ดูสคริปทั้งหมด</a>
+  </div>
+
+</div>
 
 </body>
 </html>
