@@ -2,101 +2,136 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Kraphat Free Script Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kraphat Script Hub</title>
 
 <style>
 body{
   margin:0;
-  background:#000;
   font-family:sans-serif;
-  color:white;
-  text-align:center;
+  background:#f5f5f5;
 }
 
-/* แบนเนอร์ */
-.banner img{
-  width:100%;
-  display:block;
-}
-
-/* หัวข้อ */
-h1{
-  margin:20px 0;
-  font-size:28px;
-}
-
-/* กล่องรวม */
-.container{
+/* หัวเว็บ */
+.header{
+  background:#fff;
+  padding:15px;
   display:flex;
-  justify-content:center;
-  gap:25px;
-  flex-wrap:wrap;
-  padding-bottom:40px;
+  align-items:center;
+  justify-content:space-between;
+  box-shadow:0 2px 6px rgba(0,0,0,0.2);
+}
+
+.logo{
+  font-size:20px;
+  font-weight:bold;
 }
 
 /* การ์ด */
-.card{
-  background:#111;
-  border-radius:20px;
-  width:280px;
+.shop-container{
   padding:15px;
-  box-shadow:0 0 25px #00ff99;
 }
 
-/* รูป */
-.card img{
+.shop-card{
+  background:#fff;
+  border-radius:14px;
+  margin-bottom:20px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.banner{
   width:100%;
-  border-radius:15px;
+  display:block;
 }
 
-/* ปุ่มนีออน */
-.btn{
+.shop-info{
+  padding:15px;
+}
+
+.shop-info h2{
+  margin:0;
+  font-size:20px;
+}
+
+.shop-info p{
+  color:#555;
+  font-size:14px;
+}
+
+.shop-btn{
   display:block;
-  margin-top:15px;
+  text-align:center;
+  background:red;
+  color:white;
   padding:14px;
-  border-radius:12px;
-  background:#00ff99;
-  color:black;
-  font-size:18px;
+  border-radius:10px;
+  margin-top:10px;
   text-decoration:none;
   font-weight:bold;
-  box-shadow:0 0 20px #00ff99;
-  transition:0.3s;
 }
 
-.btn:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 35px #00ff99;
+/* ปุ่มแชทลอย */
+.chat-btn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:red;
+  color:#fff;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 </style>
 </head>
 
 <body>
 
-<div class="banner">
-  <img src="banner.png">
+<div class="header">
+  <div class="logo">Kraphat Script Hub</div>
 </div>
 
-<h1>Kraphat Free Script Hub</h1>
+<div class="shop-container">
 
-<div class="container">
-
-  <div class="card">
-    <img src="bloxfruit-banner.jpg">
-    <a href="bloxfruit.html" class="btn">ดูสคริปทั้งหมด</a>
+  <!-- BLOXFRUIT -->
+  <div class="shop-card">
+    <img src="bloxfruit-banner.jpg" class="banner">
+    <div class="shop-info">
+      <h2>สคริปต์ BLOXFRUIT</h2>
+      <p>รวมสคริปต์ทั้งหมดสำหรับแมพ Bloxfruit</p>
+      <a href="bloxfruit.html" class="shop-btn">สคริปต์ทั้งหมด</a>
+    </div>
   </div>
 
-  <div class="card">
-    <img src="escape-tsunami-banner.jpg">
-    <a href="escape-tsunami.html" class="btn">ดูสคริปทั้งหมด</a>
+  <!-- ESCAPE TSUNAMI -->
+  <div class="shop-card">
+    <img src="escape-tsunami-banner.jpg" class="banner">
+    <div class="shop-info">
+      <h2>สคริปต์ ESCAPE TSUNAMI</h2>
+      <p>รวมสคริปต์ทั้งหมดสำหรับแมพหนีสึนามิ</p>
+      <a href="escape-tsunami.html" class="shop-btn">สคริปต์ทั้งหมด</a>
+    </div>
   </div>
 
-  <div class="card">
-    <img src="fps-flick-banner.jpg">
-    <a href="fps-flick.html" class="btn">ดูสคริปทั้งหมด</a>
+  <!-- FPS SCRIPT -->
+  <div class="shop-card">
+    <img src="fps-flick-banner.jpg" class="banner">
+    <div class="shop-info">
+      <h2>สคริปต์ FPS</h2>
+      <p>สคริปต์เพิ่ม FPS และปรับภาพให้ลื่น</p>
+      <a href="fps.html" class="shop-btn">สคริปต์ทั้งหมด</a>
+    </div>
   </div>
 
 </div>
+
+<div class="chat-btn">💬</div>
 
 </body>
 </html>
