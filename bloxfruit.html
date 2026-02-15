@@ -2,105 +2,32 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Blox Fruit Scripts</title>
+<title>Bloxfruit Script</title>
+</head>
 
-<style>
-body{
-  margin:0;
-  background:#000;
-  color:#00ff66;
-  font-family:Arial;
-}
-h1{
-  text-align:center;
-  padding:20px;
-  text-shadow:0 0 15px #00ff66;
-}
-.card{
-  max-width:420px;
-  margin:20px auto;
-  padding:15px;
-  border:2px solid #00ff66;
-  border-radius:18px;
-  box-shadow:0 0 25px #00ff66;
-}
-.card img{
-  width:100%;
-  border-radius:14px;
-  margin-bottom:10px;
-}
-.script{
-  background:#000;
-  border:1px solid #00ff66;
-  border-radius:10px;
-  padding:10px;
-  font-family:monospace;
-  font-size:14px;
-  margin-top:10px;
-}
-button{
-  width:100%;
-  margin-top:10px;
-  padding:12px;
-  border:none;
-  border-radius:30px;
-  background:#00ff66;
-  color:#000;
-  box-shadow:0 0 20px #00ff66;
-}
-a{
-  display:block;
-  text-align:center;
-  margin:30px;
-  color:#00ff66;
-  text-decoration:none;
-}
-</style>
+<body style="background:#000;color:#00ff88;font-family:Arial;text-align:center">
+
+<h1>Bloxfruit Script</h1>
+
+<textarea id="bf1" style="width:90%;height:120px;border-radius:10px;">
+-- วางสคริปต์บล็อคฟุตอันที่ 1
+</textarea>
+<br><button onclick="copy('bf1')">Copy</button>
+
+<br><br>
+
+<textarea id="bf2" style="width:90%;height:120px;border-radius:10px;">
+-- วางสคริปต์บล็อคฟุตอันที่ 2
+</textarea>
+<br><button onclick="copy('bf2')">Copy</button>
 
 <script>
 function copy(id){
-  const text = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text);
-  alert("คัดลอกสคริปต์แล้ว!");
+var text = document.getElementById(id);
+text.select();
+document.execCommand("copy");
 }
 </script>
-</head>
-
-<body>
-
-<h1>🍎 Blox Fruit Scripts</h1>
-
-<div class="card">
-  <img src="images/bloxfruit.jpg">
-  <h3>OmGshit Hub</h3>
-  <div class="script" id="bf1">
-loadstring(game:HttpGet("https://raw.githubusercontent.com/OmGshit/Scripts/main/MainLoader.lua"))()
-  </div>
-  <button onclick="copy('bf1')">📋 Copy Script</button>
-</div>
-
-<div class="card">
-  <img src="images/bloxfruit.jpg">
-  <h3>Dragon Hub</h3>
-  <div class="script" id="bf2">
-loadstring(game:HttpGet("https://raw.githubusercontent.com/dragonhubdev/dragonwitheryone/main/Main-BF.lua"))()
-  </div>
-  <button onclick="copy('bf2')">📋 Copy Script</button>
-</div>
-
-<div class="card">
-  <img src="images/bloxfruit.jpg">
-  <h3>PVP / FARM</h3>
-  <div class="script" id="bf3">
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/xxxx.lua"))()
-  </div>
-  <button onclick="copy('bf3')">📋 Copy Script</button>
-</div>
-
-<a href="index.html">⬅ กลับหน้าแรก</a>
-
-</body>
-</html>
 
 </body>
 </html>
