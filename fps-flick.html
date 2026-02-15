@@ -2,54 +2,15 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>FPS Script</title>
-
-<style>
-body{background:#000;color:#00ff88;font-family:Arial;text-align:center}
-.box{
-background:#001a0f;
-margin:30px;
-padding:20px;
-border-radius:20px;
-box-shadow:0 0 25px #00ff88;
-}
-textarea{
-width:90%;
-height:120px;
-border-radius:10px;
-border:none;
-padding:10px;
-}
-button{
-margin-top:15px;
-background:#00ff88;
-border:none;
-padding:12px 25px;
-border-radius:25px;
-font-weight:bold;
-}
-</style>
+<title>FPS Flick Script</title>
 </head>
+<body style="background:#0f0f0f;color:white;text-align:center;">
 
-<body>
+<h1>FPS Flick Script</h1>
 
-<h1>FPS Script</h1>
-
-<div class="box">
-<textarea id="fps">
+<pre>
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Joshingtonn123/JoshScript/refs/heads/main/SyrexhubSniperOrDie"))()
-</textarea>
-<br>
-<button onclick="copy('fps')">Copy Script</button>
-</div>
-
-<script>
-function copy(id){
-  var text = document.getElementById(id);
-  text.select();
-  document.execCommand("copy");
-}
-</script>
+</pre>
 
 </body>
 </html>
